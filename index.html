@@ -9,6 +9,11 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         />
+        <!-- Swiper CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
         <style>
             html {
                 scroll-behavior: smooth;
@@ -52,6 +57,12 @@
 
             .testimonial-card {
                 border-left: 4px solid #dc2626;
+                height: 100%;
+            }
+
+            /* Swiper customization */
+            .swiper-pagination-bullet-active {
+                background: #dc2626 !important;
             }
         </style>
     </head>
@@ -63,51 +74,54 @@
             >
                 <!-- Logo -->
                 <div class="flex items-center">
-                    <h1 class="text-2xl font-bold text-red-600">
+                    <a
+                        href="index.html"
+                        class="text-2xl font-bold text-red-600"
+                    >
                         <i class="fas fa-cherry mr-2"></i>Kayuki Japanese Course
-                    </h1>
+                    </a>
                 </div>
 
                 <!-- Menu Navigasi Desktop -->
                 <ul class="hidden md:flex space-x-8">
                     <li>
                         <a
-                            href="#beranda"
+                            href="index.html#beranda"
                             class="text-gray-700 hover:text-red-600 transition font-medium"
                             >Beranda</a
                         >
                     </li>
                     <li>
                         <a
-                            href="#tentang"
+                            href="tentang-kami.html"
                             class="text-gray-700 hover:text-red-600 transition font-medium"
                             >Tentang Kami</a
                         >
                     </li>
                     <li>
                         <a
-                            href="#program"
+                            href="index.html#program"
                             class="text-gray-700 hover:text-red-600 transition font-medium"
                             >Program</a
                         >
                     </li>
                     <li>
                         <a
-                            href="#dokumentasi"
+                            href="index.html#dokumentasi"
                             class="text-gray-700 hover:text-red-600 transition font-medium"
                             >Dokumentasi</a
                         >
                     </li>
                     <li>
                         <a
-                            href="#testimoni"
+                            href="index.html#testimoni"
                             class="text-gray-700 hover:text-red-600 transition font-medium"
                             >Testimoni</a
                         >
                     </li>
                     <li>
                         <a
-                            href="#kontak"
+                            href="index.html#kontak"
                             class="text-gray-700 hover:text-red-600 transition font-medium"
                             >Kontak</a
                         >
@@ -163,19 +177,28 @@
                         </div>
                     </div>
 
-                    <!-- Gambar Hero (Placeholder) -->
-                    <div class="flex justify-center">
+                    <!-- Video Hero (YouTube Embed) -->
+                    <div class="flex justify-center w-full">
                         <div
-                            class="w-full h-96 bg-gradient-to-br from-red-100 to-blue-100 rounded-lg shadow-japanese flex items-center justify-center"
+                            class="w-full aspect-video rounded-2xl shadow-japanese overflow-hidden border-4 border-white bg-gray-100"
                         >
-                            <div class="text-center">
-                                <i
-                                    class="fas fa-image text-6xl text-gray-300 mb-4"
-                                ></i>
-                                <p class="text-gray-500 text-lg">
-                                    Hero Image Placeholder
-                                </p>
-                            </div>
+                            <iframe
+                                class="w-full h-full"
+                                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&mute=1"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="
+                                    accelerometer;
+                                    autoplay;
+                                    clipboard-write;
+                                    encrypted-media;
+                                    gyroscope;
+                                    picture-in-picture;
+                                    web-share;
+                                "
+                                allowfullscreen
+                            >
+                            </iframe>
                         </div>
                     </div>
                 </div>
@@ -475,78 +498,148 @@
                     </p>
                 </div>
 
-                <!-- Grid Testimoni -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Testimoni 1 -->
-                    <div
-                        class="testimonial-card bg-white p-8 rounded-lg shadow-japanese"
-                    >
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
+                <!-- Swiper Testimonial -->
+                <div class="swiper testimonialSwiper pb-12">
+                    <div class="swiper-wrapper">
+                        <!-- Testimoni 1 -->
+                        <div class="swiper-slide h-auto">
+                            <div
+                                class="testimonial-card bg-white p-8 rounded-lg shadow-japanese mx-2"
+                            >
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                </div>
+                                <p class="text-gray-700 mb-6 italic">
+                                    "Kayuki membantu saya mencapai nilai JLPT N2
+                                    dalam 8 bulan. Instruktur sangat profesional
+                                    dan metodenya efektif. Sekarang saya bekerja
+                                    di perusahaan manufaktur di Osaka."
+                                </p>
+                                <h4 class="font-bold text-gray-900">
+                                    Ahmad Rizki Pratama
+                                </h4>
+                                <p class="text-sm text-red-600">
+                                    Bekerja di Osaka, Jepang
+                                </p>
+                            </div>
                         </div>
-                        <p class="text-gray-700 mb-6 italic">
-                            "Kayuki membantu saya mencapai nilai JLPT N2 dalam 8
-                            bulan. Instruktur sangat profesional dan metodenya
-                            efektif. Sekarang saya bekerja di perusahaan
-                            manufaktur di Osaka."
-                        </p>
-                        <h4 class="font-bold text-gray-900">
-                            Ahmad Rizki Pratama
-                        </h4>
-                        <p class="text-sm text-red-600">
-                            Bekerja di Osaka, Jepang
-                        </p>
-                    </div>
 
-                    <!-- Testimoni 2 -->
-                    <div
-                        class="testimonial-card bg-white p-8 rounded-lg shadow-japanese"
-                    >
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
+                        <!-- Testimoni 2 -->
+                        <div class="swiper-slide h-auto">
+                            <div
+                                class="testimonial-card bg-white p-8 rounded-lg shadow-japanese mx-2"
+                            >
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                </div>
+                                <p class="text-gray-700 mb-6 italic">
+                                    "Fasilitas Kayuki sangat lengkap dan suasana
+                                    belajar yang mendukung. Asrama berkualitas
+                                    membuat saya fokus belajar. Terima kasih
+                                    Kayuki telah membantu mewujudkan mimpi
+                                    saya."
+                                </p>
+                                <h4 class="font-bold text-gray-900">
+                                    Siti Nurhaliza
+                                </h4>
+                                <p class="text-sm text-red-600">
+                                    Bekerja di Tokyo, Jepang
+                                </p>
+                            </div>
                         </div>
-                        <p class="text-gray-700 mb-6 italic">
-                            "Fasilitas Kayuki sangat lengkap dan suasana belajar
-                            yang mendukung. Asrama berkualitas membuat saya
-                            fokus belajar. Terima kasih Kayuki telah membantu
-                            mewujudkan mimpi saya."
-                        </p>
-                        <h4 class="font-bold text-gray-900">Siti Nurhaliza</h4>
-                        <p class="text-sm text-red-600">
-                            Bekerja di Tokyo, Jepang
-                        </p>
-                    </div>
 
-                    <!-- Testimoni 3 -->
-                    <div
-                        class="testimonial-card bg-white p-8 rounded-lg shadow-japanese"
-                    >
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
+                        <!-- Testimoni 3 -->
+                        <div class="swiper-slide h-auto">
+                            <div
+                                class="testimonial-card bg-white p-8 rounded-lg shadow-japanese mx-2"
+                            >
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                </div>
+                                <p class="text-gray-700 mb-6 italic">
+                                    "Program SSW Kayuki sangat praktis dan
+                                    aplikatif. Instruktur berpengalaman siap
+                                    membimbing setiap langkah kami. Saya
+                                    berhasil lulus dan sekarang mendapat promosi
+                                    di perusahaan saya."
+                                </p>
+                                <h4 class="font-bold text-gray-900">
+                                    Budi Santoso
+                                </h4>
+                                <p class="text-sm text-red-600">
+                                    Bekerja di Yokohama, Jepang
+                                </p>
+                            </div>
                         </div>
-                        <p class="text-gray-700 mb-6 italic">
-                            "Program SSW Kayuki sangat praktis dan aplikatif.
-                            Instruktur berpengalaman siap membimbing setiap
-                            langkah kami. Saya berhasil lulus dan sekarang
-                            mendapat promosi di perusahaan saya."
-                        </p>
-                        <h4 class="font-bold text-gray-900">Budi Santoso</h4>
-                        <p class="text-sm text-red-600">
-                            Bekerja di Yokohama, Jepang
-                        </p>
+
+                        <!-- Testimoni 4 -->
+                        <div class="swiper-slide h-auto">
+                            <div
+                                class="testimonial-card bg-white p-8 rounded-lg shadow-japanese mx-2"
+                            >
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                </div>
+                                <p class="text-gray-700 mb-6 italic">
+                                    "Berkat Kayuki, saya bisa beradaptasi dengan
+                                    cepat di Jepang. Tidak hanya bahasa, kami
+                                    juga diajarkan budaya dan etika kerja yang
+                                    sangat berguna."
+                                </p>
+                                <h4 class="font-bold text-gray-900">
+                                    Dewi Lestari
+                                </h4>
+                                <p class="text-sm text-red-600">
+                                    Bekerja di Nagoya, Jepang
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Testimoni 5 -->
+                        <div class="swiper-slide h-auto">
+                            <div
+                                class="testimonial-card bg-white p-8 rounded-lg shadow-japanese mx-2"
+                            >
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                    <i class="fas fa-star text-yellow-500"></i>
+                                </div>
+                                <p class="text-gray-700 mb-6 italic">
+                                    "Proses penyaluran kerja di Kayuki sangat
+                                    transparan dan membantu. Saya merasa aman
+                                    dan terbimbing dari awal pendaftaran hingga
+                                    tiba di Jepang."
+                                </p>
+                                <h4 class="font-bold text-gray-900">
+                                    Rian Hidayat
+                                </h4>
+                                <p class="text-sm text-red-600">
+                                    Bekerja di Fukuoka, Jepang
+                                </p>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </section>
@@ -610,42 +703,42 @@
                         <ul class="space-y-3 text-gray-300">
                             <li>
                                 <a
-                                    href="#beranda"
+                                    href="index.html#beranda"
                                     class="hover:text-red-600 transition"
                                     >Beranda</a
                                 >
                             </li>
                             <li>
                                 <a
-                                    href="#tentang"
+                                    href="tentang-kami.html"
                                     class="hover:text-red-600 transition"
                                     >Tentang Kami</a
                                 >
                             </li>
                             <li>
                                 <a
-                                    href="#program"
+                                    href="index.html#program"
                                     class="hover:text-red-600 transition"
                                     >Program Kelas</a
                                 >
                             </li>
                             <li>
                                 <a
-                                    href="#dokumentasi"
+                                    href="index.html#dokumentasi"
                                     class="hover:text-red-600 transition"
                                     >Dokumentasi</a
                                 >
                             </li>
                             <li>
                                 <a
-                                    href="#testimoni"
+                                    href="index.html#testimoni"
                                     class="hover:text-red-600 transition"
                                     >Testimoni Alumni</a
                                 >
                             </li>
                             <li>
                                 <a
-                                    href="#kontak"
+                                    href="index.html#kontak"
                                     class="hover:text-red-600 transition"
                                     >Kontak</a
                                 >
@@ -801,8 +894,32 @@
             <i class="fab fa-whatsapp text-3xl"></i>
         </a>
 
-        <!-- Script: smooth scroll + modals -->
+        <!-- Scripts: Swiper + Main -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script>
+            // Initialize Swiper
+            const swiper = new Swiper(".testimonialSwiper", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                    },
+                },
+            });
+
             // Smooth scroll for internal anchors
             document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
                 anchor.addEventListener("click", function (e) {
