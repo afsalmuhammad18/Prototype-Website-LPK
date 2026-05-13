@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tentang Kami - Kayuki Japanese Course</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+            .gradient-japanese {
+                background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            }
+            .shadow-japanese {
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            }
+            .button-hover-effect:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            }
+            .team-card {
+                transition: all 0.3s ease;
+            }
+            .team-card:hover {
+                transform: translateY(-5px);
+            }
+        </style>
+    </head>
+    <body class="bg-white text-gray-900">
+        <!-- Header & Navigasi -->
+        <header class="sticky top-0 z-50 bg-white shadow-japanese">
+            <nav
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center"
+            >
+                <div class="flex items-center">
+                    <a
+                        href="index.html"
+                        class="text-2xl font-bold text-red-600"
+                    >
+                        <i class="fas fa-cherry mr-2"></i>Kayuki Japanese Course
+                    </a>
+                </div>
+                <ul class="hidden md:flex space-x-8">
+                    <li>
+                        <a
+                            href="index.html#beranda"
+                            class="text-gray-700 hover:text-red-600 transition font-medium"
+                            >Beranda</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="tentang-kami.html"
+                            class="text-red-600 transition font-medium border-b-2 border-red-600"
+                            >Tentang Kami</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="index.html#program"
+                            class="text-gray-700 hover:text-red-600 transition font-medium"
+                            >Program</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="index.html#dokumentasi"
+                            class="text-gray-700 hover:text-red-600 transition font-medium"
+                            >Dokumentasi</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="index.html#testimoni"
+                            class="text-gray-700 hover:text-red-600 transition font-medium"
+                            >Testimoni</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="index.html#kontak"
+                            class="text-gray-700 hover:text-red-600 transition font-medium"
+                            >Kontak</a
+                        >
+                    </li>
+                </ul>
+                <button class="md:hidden text-gray-700 text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="bg-red-600 py-16 text-white text-center">
+            <div class="max-w-7xl mx-auto px-4">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    Tentang Kami
+                </h1>
+                <p class="text-lg opacity-90">
+                    Mengenal lebih dekat Kayuki Japanese Course
+                </p>
+            </div>
+        </section>
+
+        <!-- Sejarah Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4">
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="w-full md:w-1/2">
+                        <img
+                            src="https://picsum.photos/seed/history/600/400"
+                            alt="Sejarah Kayuki"
+                            class="rounded-lg shadow-japanese"
+                        />
+                    </div>
+                    <div class="w-full md:w-1/2 space-y-4">
+                        <h2 class="text-3xl font-bold text-gray-900">
+                            Sejarah Kami
+                        </h2>
+                        <div class="w-20 h-1 bg-red-600"></div>
+                        <p class="text-gray-600 leading-relaxed">
+                            Kayuki Japanese Course didirikan pada tahun 2015
+                            dengan semangat untuk menjembatani generasi muda
+                            Indonesia dalam meraih impian berkarir di Negeri
+                            Sakura. Berawal dari sebuah kursus bahasa kecil,
+                            kami berkembang menjadi Lembaga Pelatihan Kerja yang
+                            diakui secara resmi.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Hingga saat ini, kami telah memberangkatkan lebih
+                            dari 500 alumni yang kini sukses bekerja di berbagai
+                            sektor industri di Jepang, mulai dari manufaktur,
+                            kesehatan, hingga perhotelan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visi Misi Section -->
+        <section class="py-20 bg-blue-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div
+                        class="bg-white p-8 rounded-lg shadow-japanese border-t-4 border-red-600"
+                    >
+                        <div class="text-4xl text-red-600 mb-4">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Visi Kami</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Menjadi lembaga pelatihan kerja dan bahasa Jepang
+                            terdepan di Indonesia yang menghasilkan sumber daya
+                            manusia kompeten, beretika tinggi, dan mampu
+                            bersaing secara global di pasar kerja Jepang.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-lg shadow-japanese border-t-4 border-blue-900"
+                    >
+                        <div class="text-4xl text-blue-900 mb-4">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Misi Kami</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-check-circle text-green-500 mt-1 mr-3"
+                                ></i>
+                                Menyediakan kurikulum pembelajaran bahasa Jepang
+                                yang intensif dan aplikatif.
+                            </li>
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-check-circle text-green-500 mt-1 mr-3"
+                                ></i>
+                                Membekali peserta dengan pemahaman budaya dan
+                                etika kerja Jepang yang mendalam.
+                            </li>
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-check-circle text-green-500 mt-1 mr-3"
+                                ></i>
+                                Membangun jaringan kerjasama yang kuat dengan
+                                perusahaan-perusahaan terkemuka di Jepang.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pengurus & Pengajar Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                        Pengurus & Pengajar
+                    </h2>
+                    <p class="text-lg text-gray-600">
+                        Tim profesional yang akan membimbing Anda menuju sukses
+                    </p>
+                </div>
+
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+                >
+                    <!-- Person 1 -->
+                    <div
+                        class="team-card bg-white rounded-lg shadow-japanese overflow-hidden text-center p-6 border border-gray-100"
+                    >
+                        <img
+                            src="https://i.pravatar.cc/150?u=fulan1"
+                            alt="Fulan bin Fulan"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-red-100"
+                        />
+                        <h4 class="text-xl font-bold text-gray-900">
+                            Fulan bin Fulan
+                        </h4>
+                        <p class="text-red-600 mb-4">Direktur Utama</p>
+                        <button
+                            class="view-profile-btn bg-gray-100 hover:bg-red-600 hover:text-white text-gray-700 font-semibold py-2 px-4 rounded-full transition duration-300 text-sm"
+                            data-name="Fulan bin Fulan"
+                            data-role="Direktur Utama"
+                            data-image="https://i.pravatar.cc/150?u=fulan1"
+                            data-bio="Fulan telah berpengalaman lebih dari 15 tahun dalam manajemen LPK dan kerjasama internasional. Beliau adalah lulusan salah satu universitas ternama di Tokyo."
+                            data-track="Pernah bekerja di Toyota City selama 5 tahun sebelum kembali ke Indonesia untuk mendirikan Kayuki."
+                        >
+                            Lihat Profil
+                        </button>
+                    </div>
+
+                    <!-- Person 2 -->
+                    <div
+                        class="team-card bg-white rounded-lg shadow-japanese overflow-hidden text-center p-6 border border-gray-100"
+                    >
+                        <img
+                            src="https://i.pravatar.cc/150?u=fulanah1"
+                            alt="Fulanah binti Fulan"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-red-100"
+                        />
+                        <h4 class="text-xl font-bold text-gray-900">
+                            Fulanah binti Fulan
+                        </h4>
+                        <p class="text-red-600 mb-4">
+                            Kepala Pengajar (Sensei)
+                        </p>
+                        <button
+                            class="view-profile-btn bg-gray-100 hover:bg-red-600 hover:text-white text-gray-700 font-semibold py-2 px-4 rounded-full transition duration-300 text-sm"
+                            data-name="Fulanah binti Fulan"
+                            data-role="Kepala Pengajar (Sensei)"
+                            data-image="https://i.pravatar.cc/150?u=fulanah1"
+                            data-bio="Sertifikasi JLPT N1 dengan pengalaman mengajar bahasa Jepang selama 10 tahun. Spesialis dalam persiapan ujian JLPT N2."
+                            data-track="Lulusan Pendidikan Bahasa Jepang UPI, pernah mengikuti program pertukaran guru di Kyoto."
+                        >
+                            Lihat Profil
+                        </button>
+                    </div>
+
+                    <!-- Person 3 -->
+                    <div
+                        class="team-card bg-white rounded-lg shadow-japanese overflow-hidden text-center p-6 border border-gray-100"
+                    >
+                        <img
+                            src="https://i.pravatar.cc/150?u=fulan2"
+                            alt="Fulan Ahmad"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-red-100"
+                        />
+                        <h4 class="text-xl font-bold text-gray-900">
+                            Fulan Ahmad
+                        </h4>
+                        <p class="text-red-600 mb-4">Koordinator Program SSW</p>
+                        <button
+                            class="view-profile-btn bg-gray-100 hover:bg-red-600 hover:text-white text-gray-700 font-semibold py-2 px-4 rounded-full transition duration-300 text-sm"
+                            data-name="Fulan Ahmad"
+                            data-role="Koordinator Program SSW"
+                            data-image="https://i.pravatar.cc/150?u=fulan2"
+                            data-bio="Fokus pada pengembangan kurikulum teknis untuk program Tokutei Ginou dan penyaluran kerja."
+                            data-track="Mantan Ginou Jisshuusei (Magang) di bidang manufaktur selama 3 tahun di Aichi."
+                        >
+                            Lihat Profil
+                        </button>
+                    </div>
+
+                    <!-- Person 4 -->
+                    <div
+                        class="team-card bg-white rounded-lg shadow-japanese overflow-hidden text-center p-6 border border-gray-100"
+                    >
+                        <img
+                            src="https://i.pravatar.cc/150?u=fulanah2"
+                            alt="Siti Fulanah"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-red-100"
+                        />
+                        <h4 class="text-xl font-bold text-gray-900">
+                            Siti Fulanah
+                        </h4>
+                        <p class="text-red-600 mb-4">Admin & Konselor</p>
+                        <button
+                            class="view-profile-btn bg-gray-100 hover:bg-red-600 hover:text-white text-gray-700 font-semibold py-2 px-4 rounded-full transition duration-300 text-sm"
+                            data-name="Siti Fulanah"
+                            data-role="Admin & Konselor"
+                            data-image="https://i.pravatar.cc/150?u=fulanah2"
+                            data-bio="Membantu peserta dalam proses administrasi dokumen dan konsultasi persiapan keberangkatan."
+                            data-track="Berpengalaman di bidang administrasi perkantoran selama 5 tahun."
+                        >
+                            Lihat Profil
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer (Sama dengan index.html) -->
+        <footer id="kontak" class="bg-gray-900 text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-red-600">
+                            Kayuki Japanese Course
+                        </h3>
+                        <div class="space-y-3 text-gray-300">
+                            <p class="flex items-start">
+                                <i
+                                    class="fas fa-map-marker-alt text-red-600 mr-3 mt-1"
+                                ></i
+                                ><span
+                                    >Jl. Masjid Agung No.121, Pamoyanan, Kec.
+                                    Cianjur<br />Kabupaten Cianjur, Jawa Barat
+                                    43211</span
+                                >
+                            </p>
+                            <p class="flex items-center">
+                                <i class="fas fa-envelope text-red-600 mr-3"></i
+                                ><a
+                                    href="mailto:info@kayuki.id"
+                                    class="hover:text-red-600 transition"
+                                    >info@kayuki.id</a
+                                >
+                            </p>
+                            <p class="flex items-center">
+                                <i class="fas fa-phone text-red-600 mr-3"></i
+                                ><a
+                                    href="tel:+6221555555"
+                                    class="hover:text-red-600 transition"
+                                    >(021) 555-5555</a
+                                >
+                            </p>
+                            <p class="flex items-center">
+                                <i
+                                    class="fas fa-whatsapp text-green-500 mr-3"
+                                ></i
+                                ><a
+                                    href="https://wa.me/62855555555555"
+                                    class="hover:text-green-500 transition"
+                                    >+62 855-555-5555</a
+                                >
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold mb-4 text-red-600">
+                            Tautan Cepat
+                        </h4>
+                        <ul class="space-y-3 text-gray-300">
+                            <li>
+                                <a
+                                    href="index.html#beranda"
+                                    class="hover:text-red-600 transition"
+                                    >Beranda</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="tentang-kami.html"
+                                    class="hover:text-red-600 transition"
+                                    >Tentang Kami</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="index.html#program"
+                                    class="hover:text-red-600 transition"
+                                    >Program Kelas</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="index.html#dokumentasi"
+                                    class="hover:text-red-600 transition"
+                                    >Dokumentasi</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="index.html#testimoni"
+                                    class="hover:text-red-600 transition"
+                                    >Testimoni Alumni</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="index.html#kontak"
+                                    class="hover:text-red-600 transition"
+                                    >Kontak</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold mb-4 text-red-600">
+                            Jam Operasional
+                        </h4>
+                        <ul class="space-y-3 text-gray-300">
+                            <li>Senin - Jumat: 08:00 - 20:00</li>
+                            <li>Sabtu: 08:00 - 18:00</li>
+                            <li>Minggu: Ditutup</li>
+                        </ul>
+                        <div class="mt-8">
+                            <h4 class="text-lg font-bold mb-4 text-red-600">
+                                Ikuti Kami
+                            </h4>
+                            <div class="flex space-x-4">
+                                <a
+                                    href="#"
+                                    class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition"
+                                    ><i class="fab fa-facebook-f"></i
+                                ></a>
+                                <a
+                                    href="#"
+                                    class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition"
+                                    ><i class="fab fa-instagram"></i
+                                ></a>
+                                <a
+                                    href="#"
+                                    class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition"
+                                    ><i class="fab fa-youtube"></i
+                                ></a>
+                                <a
+                                    href="#"
+                                    class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition"
+                                    ><i class="fab fa-tiktok"></i
+                                ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 pt-8">
+                    <p class="text-center text-gray-400">
+                        &copy; 2026 Kayuki Japanese Course. Semua Hak
+                        Dilindungi.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Profile Modal -->
+        <div
+            id="profileModal"
+            class="fixed inset-0 hidden z-50 items-center justify-center bg-black bg-opacity-50 px-4"
+        >
+            <div class="bg-white rounded-lg max-w-2xl w-full p-6 relative">
+                <button
+                    id="closeProfileModal"
+                    class="absolute top-4 right-4 text-gray-500 text-3xl hover:text-red-600 transition"
+                >
+                    &times;
+                </button>
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <img
+                        id="modalImg"
+                        src=""
+                        alt=""
+                        class="w-40 h-40 rounded-lg object-cover shadow-japanese"
+                    />
+                    <div class="space-y-4">
+                        <div>
+                            <h3
+                                id="modalName"
+                                class="text-2xl font-bold text-gray-900"
+                            ></h3>
+                            <p
+                                id="modalRole"
+                                class="text-red-600 font-semibold"
+                            ></p>
+                        </div>
+                        <div>
+                            <h4
+                                class="font-bold text-gray-800 border-b border-gray-100 pb-1 mb-2"
+                            >
+                                Profil
+                            </h4>
+                            <p
+                                id="modalBio"
+                                class="text-gray-600 text-sm leading-relaxed"
+                            ></p>
+                        </div>
+                        <div>
+                            <h4
+                                class="font-bold text-gray-800 border-b border-gray-100 pb-1 mb-2"
+                            >
+                                Rekam Jejak
+                            </h4>
+                            <p
+                                id="modalTrack"
+                                class="text-gray-600 text-sm leading-relaxed"
+                            ></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Modal Profile Logic
+            const profileModal = document.getElementById("profileModal");
+            const closeProfileModal =
+                document.getElementById("closeProfileModal");
+            const modalImg = document.getElementById("modalImg");
+            const modalName = document.getElementById("modalName");
+            const modalRole = document.getElementById("modalRole");
+            const modalBio = document.getElementById("modalBio");
+            const modalTrack = document.getElementById("modalTrack");
+
+            document.querySelectorAll(".view-profile-btn").forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    modalImg.src = btn.dataset.image;
+                    modalName.textContent = btn.dataset.name;
+                    modalRole.textContent = btn.dataset.role;
+                    modalBio.textContent = btn.dataset.bio;
+                    modalTrack.textContent = btn.dataset.track;
+
+                    profileModal.classList.remove("hidden");
+                    profileModal.classList.add("flex");
+                });
+            });
+
+            closeProfileModal.addEventListener("click", () => {
+                profileModal.classList.add("hidden");
+                profileModal.classList.remove("flex");
+            });
+
+            profileModal.addEventListener("click", (e) => {
+                if (e.target === profileModal) {
+                    profileModal.classList.add("hidden");
+                    profileModal.classList.remove("flex");
+                }
+            });
+        </script>
+    </body>
+</html>
