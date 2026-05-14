@@ -66,24 +66,25 @@
             }
         </style>
     </head>
-    <body class="bg-white text-gray-900">
+    <body class="bg-white text-gray-900 overflow-x-hidden">
         <!-- Header & Navigasi (Sticky) -->
         <header class="sticky top-0 z-50 bg-white shadow-japanese">
             <nav
-                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center"
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex justify-between items-center gap-3"
             >
                 <!-- Logo -->
-                <div class="flex items-center">
+                <div class="flex items-center min-w-0">
                     <a
                         href="index.html"
-                        class="text-2xl font-bold text-red-600"
+                        class="flex items-center min-w-0 text-lg sm:text-xl lg:text-2xl font-bold text-red-600 leading-tight"
                     >
-                        <i class="fas fa-cherry mr-2"></i>Kayuki Japanese Course
+                        <i class="fas fa-cherry mr-2 shrink-0"></i>
+                        <span class="truncate">Kayuki Japanese Course</span>
                     </a>
                 </div>
 
                 <!-- Menu Navigasi Desktop -->
-                <ul class="hidden md:flex space-x-8">
+                <ul class="hidden xl:flex xl:items-center xl:space-x-8">
                     <li>
                         <a
                             href="index.html#beranda"
@@ -100,7 +101,7 @@
                     </li>
                     <li>
                         <a
-                            href="index.html#program"
+                            href="program.html"
                             class="text-gray-700 hover:text-red-600 transition font-medium"
                             >Program</a
                         >
@@ -136,22 +137,71 @@
                 </ul>
 
                 <!-- Menu Toggle Mobile -->
-                <button class="md:hidden text-gray-700 text-2xl">
-                    <i class="fas fa-bars"></i>
+                <button
+                    id="mobileMenuButton"
+                    type="button"
+                    class="xl:hidden shrink-0 text-gray-700 text-2xl"
+                    aria-controls="mobileMenu"
+                    aria-expanded="false"
+                    aria-label="Buka menu navigasi"
+                >
+                    <i id="mobileMenuIcon" class="fas fa-bars"></i>
                 </button>
             </nav>
+            <div
+                id="mobileMenu"
+                class="hidden xl:hidden border-t border-gray-100 bg-white"
+            >
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 space-y-1">
+                    <a
+                        href="index.html#beranda"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-red-600 bg-red-50"
+                        >Beranda</a
+                    >
+                    <a
+                        href="tentang-kami.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition"
+                        >Tentang Kami</a
+                    >
+                    <a
+                        href="program.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition"
+                        >Program</a
+                    >
+                    <a
+                        href="index.html#pendaftaran"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition"
+                        >Pendaftaran</a
+                    >
+                    <a
+                        href="index.html#dokumentasi"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition"
+                        >Dokumentasi</a
+                    >
+                    <a
+                        href="index.html#testimoni"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition"
+                        >Testimoni</a
+                    >
+                    <a
+                        href="index.html#kontak"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition"
+                        >Kontak</a
+                    >
+                </div>
+            </div>
         </header>
 
         <!-- Hero Section -->
-        <section id="beranda" class="gradient-japanese py-16 sm:py-24 lg:py-32">
+        <section id="beranda" class="gradient-japanese py-12 sm:py-24 lg:py-32">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div
-                    class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+                    class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center"
                 >
                     <!-- Konten Kiri -->
                     <div class="space-y-6">
                         <h1
-                            class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
+                            class="text-3xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
                         >
                             Wujudkan Mimpi Berkarir di Jepang Bersama
                             <span class="text-red-600"
@@ -168,7 +218,7 @@
                         <div class="flex flex-col sm:flex-row gap-4 pt-4">
                             <button
                                 id="daftarNowBtn"
-                                class="button-hover-effect bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 flex items-center justify-center"
+                                class="button-hover-effect w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 flex items-center justify-center"
                             >
                                 <i class="fas fa-user-plus mr-2"></i>Daftar
                                 Sekarang
@@ -176,7 +226,7 @@
                             <a
                                 href="https://wa.me/62855555555555?text=Halo%2C%20saya%20ingin%20konsultasi%20gratis%20mengenai%20program%20Kayuki"
                                 target="_blank"
-                                class="button-hover-effect bg-blue-900 hover:bg-blue-950 text-white font-bold py-3 px-8 rounded-lg transition duration-300 flex items-center justify-center"
+                                class="button-hover-effect w-full sm:w-auto bg-blue-900 hover:bg-blue-950 text-white font-bold py-3 px-8 rounded-lg transition duration-300 flex items-center justify-center"
                             >
                                 <i class="fas fa-phone mr-2"></i>Konsultasi
                                 Gratis
@@ -187,7 +237,7 @@
                     <!-- Video Hero (YouTube Embed) -->
                     <div class="flex justify-center w-full">
                         <div
-                            class="w-full aspect-video rounded-2xl shadow-japanese overflow-hidden border-4 border-white bg-gray-100"
+                            class="w-full aspect-video rounded-lg sm:rounded-2xl shadow-japanese overflow-hidden border-2 sm:border-4 border-white bg-gray-100"
                         >
                             <iframe
                                 class="w-full h-full"
@@ -239,11 +289,11 @@
         </section>
 
         <!-- Mengapa Memilih Kayuki (Why Us) -->
-        <section id="tentang" class="py-20 lg:py-28 bg-white">
+        <section id="tentang" class="py-16 lg:py-28 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
+                <div class="text-center mb-10 sm:mb-16">
                     <h2
-                        class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4"
+                        class="text-3xl sm:text-5xl font-bold text-gray-900 mb-4"
                     >
                         Mengapa Memilih Kayuki?
                     </h2>
@@ -310,11 +360,11 @@
         </section>
 
         <!-- Program Kelas Kami -->
-        <section id="program" class="py-20 lg:py-28 gradient-japanese">
+        <section id="program" class="py-16 lg:py-28 gradient-japanese">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
+                <div class="text-center mb-10 sm:mb-16">
                     <h2
-                        class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4"
+                        class="text-3xl sm:text-5xl font-bold text-gray-900 mb-4"
                     >
                         Program Kelas Kami
                     </h2>
@@ -425,11 +475,11 @@
         </section>
 
         <!-- Pendaftaran & Job Matching -->
-        <section id="pendaftaran" class="py-20 lg:py-28 bg-white">
+        <section id="pendaftaran" class="py-16 lg:py-28 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
+                <div class="text-center mb-10 sm:mb-16">
                     <h2
-                        class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4"
+                        class="text-3xl sm:text-5xl font-bold text-gray-900 mb-4"
                     >
                         Pendaftaran & Job Matching
                     </h2>
@@ -441,14 +491,14 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- Pendaftaran Program -->
                     <div
-                        class="bg-gradient-to-br from-red-50 to-white p-10 rounded-2xl shadow-japanese border border-red-100 hover:shadow-lg transition duration-300 group"
+                        class="bg-gradient-to-br from-red-50 to-white p-6 sm:p-10 rounded-2xl shadow-japanese border border-red-100 hover:shadow-lg transition duration-300 group"
                     >
                         <div
                             class="text-6xl text-red-600 mb-6 group-hover:scale-110 transition duration-300"
                         >
                             <i class="fas fa-file-signature"></i>
                         </div>
-                        <h3 class="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
                             Pendaftaran Program
                         </h3>
                         <p class="text-gray-600 mb-8 leading-relaxed">
@@ -467,14 +517,14 @@
 
                     <!-- Job Matching -->
                     <div
-                        class="bg-gradient-to-br from-blue-50 to-white p-10 rounded-2xl shadow-japanese border border-blue-100 hover:shadow-lg transition duration-300 group"
+                        class="bg-gradient-to-br from-blue-50 to-white p-6 sm:p-10 rounded-2xl shadow-japanese border border-blue-100 hover:shadow-lg transition duration-300 group"
                     >
                         <div
                             class="text-6xl text-blue-900 mb-6 group-hover:scale-110 transition duration-300"
                         >
                             <i class="fas fa-handshake"></i>
                         </div>
-                        <h3 class="text-3xl font-bold text-gray-900 mb-4">
+                        <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
                             Job Matching
                         </h3>
                         <p class="text-gray-600 mb-8 leading-relaxed">
@@ -495,11 +545,11 @@
         </section>
 
         <!-- Dokumentasi -->
-        <section id="dokumentasi" class="py-20 lg:py-28 bg-white">
+        <section id="dokumentasi" class="py-16 lg:py-28 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
+                <div class="text-center mb-10 sm:mb-16">
                     <h2
-                        class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4"
+                        class="text-3xl sm:text-5xl font-bold text-gray-900 mb-4"
                     >
                         Dokumentasi
                     </h2>
@@ -562,11 +612,11 @@
         </section>
 
         <!-- Testimoni Alumni -->
-        <section id="testimoni" class="py-20 lg:py-28 bg-blue-50">
+        <section id="testimoni" class="py-16 lg:py-28 bg-blue-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
+                <div class="text-center mb-10 sm:mb-16">
                     <h2
-                        class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4"
+                        class="text-3xl sm:text-5xl font-bold text-gray-900 mb-4"
                     >
                         Kata Alumni Kami
                     </h2>
@@ -794,7 +844,7 @@
                             </li>
                             <li>
                                 <a
-                                    href="index.html#program"
+                                    href="program.html"
                                     class="hover:text-red-600 transition"
                                     >Program Kelas</a
                                 >
@@ -896,9 +946,11 @@
         <!-- Form Modal -->
         <div
             id="formModal"
-            class="fixed inset-0 hidden z-50 items-center justify-center bg-black bg-opacity-50 px-4"
+            class="fixed inset-0 hidden z-50 items-center justify-center bg-black bg-opacity-50 px-4 py-6"
         >
-            <div class="bg-white rounded-lg max-w-lg w-full p-6">
+            <div
+                class="bg-white rounded-lg max-w-lg w-full max-h-[90vh] overflow-y-auto p-6"
+            >
                 <div class="flex justify-between items-center mb-4">
                     <h3 class="text-xl font-bold">Form Daftar</h3>
                     <button id="closeFormModal" class="text-gray-500 text-2xl">
@@ -945,9 +997,11 @@
         <!-- Detail Modal -->
         <div
             id="detailModal"
-            class="fixed inset-0 hidden z-50 items-center justify-center bg-black bg-opacity-50 px-4"
+            class="fixed inset-0 hidden z-50 items-center justify-center bg-black bg-opacity-50 px-4 py-6"
         >
-            <div class="bg-white rounded-lg max-w-2xl w-full p-6">
+            <div
+                class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6"
+            >
                 <div class="flex justify-between items-center mb-4">
                     <h3 id="detailTitle" class="text-2xl font-bold"></h3>
                     <button
@@ -973,14 +1027,53 @@
         <a
             href="https://wa.me/62855555555555"
             target="_blank"
-            class="floating-whatsapp fixed bottom-8 right-8 z-40 w-16 h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-japanese flex items-center justify-center transition duration-300"
+            class="floating-whatsapp fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-40 w-14 h-14 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-japanese flex items-center justify-center transition duration-300"
         >
-            <i class="fab fa-whatsapp text-3xl"></i>
+            <i class="fab fa-whatsapp text-2xl sm:text-3xl"></i>
         </a>
 
         <!-- Scripts: Swiper + Main -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script>
+            const mobileMenuButton =
+                document.getElementById("mobileMenuButton");
+            const mobileMenu = document.getElementById("mobileMenu");
+            const mobileMenuIcon = document.getElementById("mobileMenuIcon");
+
+            function closeMobileMenu() {
+                if (!mobileMenu || !mobileMenuButton || !mobileMenuIcon) return;
+                mobileMenu.classList.add("hidden");
+                mobileMenuButton.setAttribute("aria-expanded", "false");
+                mobileMenuButton.setAttribute("aria-label", "Buka menu navigasi");
+                mobileMenuIcon.classList.add("fa-bars");
+                mobileMenuIcon.classList.remove("fa-times");
+            }
+
+            if (mobileMenuButton && mobileMenu && mobileMenuIcon) {
+                mobileMenuButton.addEventListener("click", () => {
+                    const isOpen = !mobileMenu.classList.contains("hidden");
+                    mobileMenu.classList.toggle("hidden");
+                    mobileMenuButton.setAttribute(
+                        "aria-expanded",
+                        String(!isOpen),
+                    );
+                    mobileMenuButton.setAttribute(
+                        "aria-label",
+                        isOpen ? "Buka menu navigasi" : "Tutup menu navigasi",
+                    );
+                    mobileMenuIcon.classList.toggle("fa-bars", isOpen);
+                    mobileMenuIcon.classList.toggle("fa-times", !isOpen);
+                });
+
+                mobileMenu.querySelectorAll("a").forEach((link) => {
+                    link.addEventListener("click", closeMobileMenu);
+                });
+
+                window.addEventListener("resize", () => {
+                    if (window.innerWidth >= 1280) closeMobileMenu();
+                });
+            }
+
             // Initialize Swiper
             const swiper = new Swiper(".testimonialSwiper", {
                 slidesPerView: 1,
