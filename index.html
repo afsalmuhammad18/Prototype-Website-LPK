@@ -559,54 +559,66 @@
                     </p>
                 </div>
 
-                <div
-                    class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4"
-                >
-                    <div
-                        class="aspect-square overflow-hidden rounded-lg shadow-japanese"
-                    >
-                        <img
-                            src="https://picsum.photos/seed/kayuki1/800/800"
-                            alt="Foto Dokumentasi"
-                            class="w-full h-full object-cover hover:scale-110 transition duration-500"
-                        />
+                <!-- Swiper Dokumentasi -->
+                <div class="swiper dokumentasiSwiper pb-12">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div
+                                class="aspect-square overflow-hidden rounded-lg shadow-japanese mx-1"
+                            >
+                                <img
+                                    src="https://picsum.photos/seed/kayuki1/800/800"
+                                    alt="Foto Dokumentasi Kegiatan Kayuki 1"
+                                    class="w-full h-full object-cover hover:scale-110 transition duration-500"
+                                />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="aspect-square overflow-hidden rounded-lg shadow-japanese mx-1"
+                            >
+                                <img
+                                    src="https://picsum.photos/seed/kayuki2/800/800"
+                                    alt="Foto Dokumentasi Kegiatan Kayuki 2"
+                                    class="w-full h-full object-cover hover:scale-110 transition duration-500"
+                                />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="aspect-square overflow-hidden rounded-lg shadow-japanese mx-1"
+                            >
+                                <img
+                                    src="https://picsum.photos/seed/kayuki3/800/800"
+                                    alt="Foto Dokumentasi Kegiatan Kayuki 3"
+                                    class="w-full h-full object-cover hover:scale-110 transition duration-500"
+                                />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="aspect-square overflow-hidden rounded-lg shadow-japanese mx-1"
+                            >
+                                <img
+                                    src="https://picsum.photos/seed/kayuki4/800/800"
+                                    alt="Foto Dokumentasi Kegiatan Kayuki 4"
+                                    class="w-full h-full object-cover hover:scale-110 transition duration-500"
+                                />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="aspect-square overflow-hidden rounded-lg shadow-japanese mx-1"
+                            >
+                                <img
+                                    src="https://picsum.photos/seed/kayuki5/800/800"
+                                    alt="Foto Dokumentasi Kegiatan Kayuki 5"
+                                    class="w-full h-full object-cover hover:scale-110 transition duration-500"
+                                />
+                            </div>
+                        </div>
                     </div>
-                    <div
-                        class="aspect-square overflow-hidden rounded-lg shadow-japanese"
-                    >
-                        <img
-                            src="https://picsum.photos/seed/kayuki2/800/800"
-                            alt="Foto Dokumentasi"
-                            class="w-full h-full object-cover hover:scale-110 transition duration-500"
-                        />
-                    </div>
-                    <div
-                        class="aspect-square overflow-hidden rounded-lg shadow-japanese"
-                    >
-                        <img
-                            src="https://picsum.photos/seed/kayuki3/800/800"
-                            alt="Foto Dokumentasi"
-                            class="w-full h-full object-cover hover:scale-110 transition duration-500"
-                        />
-                    </div>
-                    <div
-                        class="aspect-square overflow-hidden rounded-lg shadow-japanese"
-                    >
-                        <img
-                            src="https://picsum.photos/seed/kayuki4/800/800"
-                            alt="Foto Dokumentasi"
-                            class="w-full h-full object-cover hover:scale-110 transition duration-500"
-                        />
-                    </div>
-                    <div
-                        class="aspect-square overflow-hidden rounded-lg shadow-japanese"
-                    >
-                        <img
-                            src="https://picsum.photos/seed/kayuki5/800/800"
-                            alt="Foto Dokumentasi"
-                            class="w-full h-full object-cover hover:scale-110 transition duration-500"
-                        />
-                    </div>
+                    <div class="swiper-pagination dokumentasi-pagination"></div>
                 </div>
             </div>
         </section>
@@ -766,7 +778,7 @@
                         </div>
                     </div>
                     <!-- Pagination -->
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper-pagination testimonial-pagination"></div>
                 </div>
             </div>
         </section>
@@ -1075,7 +1087,35 @@
             }
 
             // Initialize Swiper
-            const swiper = new Swiper(".testimonialSwiper", {
+            const dokumentasiSwiper = new Swiper(".dokumentasiSwiper", {
+                slidesPerView: 1.2,
+                spaceBetween: 16,
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".dokumentasi-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2.2,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                    },
+                    1280: {
+                        slidesPerView: 4,
+                    },
+                },
+            });
+
+            const testimonialSwiper = new Swiper(".testimonialSwiper", {
                 slidesPerView: 1,
                 spaceBetween: 20,
                 loop: true,
@@ -1084,7 +1124,7 @@
                     disableOnInteraction: false,
                 },
                 pagination: {
-                    el: ".swiper-pagination",
+                    el: ".testimonial-pagination",
                     clickable: true,
                 },
                 breakpoints: {
