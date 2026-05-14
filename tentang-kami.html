@@ -31,21 +31,22 @@
             }
         </style>
     </head>
-    <body class="bg-white text-gray-900">
+    <body class="bg-white text-gray-900 overflow-x-hidden">
         <!-- Header & Navigasi -->
         <header class="sticky top-0 z-50 bg-white shadow-japanese">
             <nav
-                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center"
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex justify-between items-center gap-3"
             >
-                <div class="flex items-center">
+                <div class="flex items-center min-w-0">
                     <a
                         href="index.html"
-                        class="text-2xl font-bold text-red-600"
+                        class="flex items-center min-w-0 text-lg sm:text-xl lg:text-2xl font-bold text-red-600 leading-tight"
                     >
-                        <i class="fas fa-cherry mr-2"></i>Kayuki Japanese Course
+                        <i class="fas fa-cherry mr-2 shrink-0"></i>
+                        <span class="truncate">Kayuki Japanese Course</span>
                     </a>
                 </div>
-                <ul class="hidden md:flex space-x-8">
+                <ul class="hidden xl:flex xl:items-center xl:space-x-8">
                     <li>
                         <a
                             href="index.html#beranda"
@@ -62,9 +63,16 @@
                     </li>
                     <li>
                         <a
-                            href="index.html#program"
+                            href="program.html"
                             class="text-gray-700 hover:text-red-600 transition font-medium"
                             >Program</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="index.html#pendaftaran"
+                            class="text-gray-700 hover:text-red-600 transition font-medium"
+                            >Pendaftaran</a
                         >
                     </li>
                     <li>
@@ -89,16 +97,65 @@
                         >
                     </li>
                 </ul>
-                <button class="md:hidden text-gray-700 text-2xl">
-                    <i class="fas fa-bars"></i>
+                <button
+                    id="mobileMenuButton"
+                    type="button"
+                    class="xl:hidden shrink-0 text-gray-700 text-2xl"
+                    aria-controls="mobileMenu"
+                    aria-expanded="false"
+                    aria-label="Buka menu navigasi"
+                >
+                    <i id="mobileMenuIcon" class="fas fa-bars"></i>
                 </button>
             </nav>
+            <div
+                id="mobileMenu"
+                class="hidden xl:hidden border-t border-gray-100 bg-white"
+            >
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 space-y-1">
+                    <a
+                        href="index.html#beranda"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition"
+                        >Beranda</a
+                    >
+                    <a
+                        href="tentang-kami.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-red-600 bg-red-50"
+                        >Tentang Kami</a
+                    >
+                    <a
+                        href="program.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition"
+                        >Program</a
+                    >
+                    <a
+                        href="index.html#pendaftaran"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition"
+                        >Pendaftaran</a
+                    >
+                    <a
+                        href="index.html#dokumentasi"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition"
+                        >Dokumentasi</a
+                    >
+                    <a
+                        href="index.html#testimoni"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition"
+                        >Testimoni</a
+                    >
+                    <a
+                        href="index.html#kontak"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition"
+                        >Kontak</a
+                    >
+                </div>
+            </div>
         </header>
 
         <!-- Hero Section -->
-        <section class="bg-red-600 py-16 text-white text-center">
+        <section class="bg-red-600 py-12 sm:py-16 text-white text-center">
             <div class="max-w-7xl mx-auto px-4">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                <h1 class="text-3xl sm:text-5xl font-bold mb-4">
                     Tentang Kami
                 </h1>
                 <p class="text-lg opacity-90">
@@ -108,14 +165,14 @@
         </section>
 
         <!-- Sejarah Section -->
-        <section class="py-20 bg-white">
+        <section class="py-16 lg:py-20 bg-white">
             <div class="max-w-4xl mx-auto px-4">
-                <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
                     <div class="w-full md:w-1/2">
                         <img
                             src="https://picsum.photos/seed/history/600/400"
                             alt="Sejarah Kayuki"
-                            class="rounded-lg shadow-japanese"
+                            class="w-full rounded-lg shadow-japanese"
                         />
                     </div>
                     <div class="w-full md:w-1/2 space-y-4">
@@ -143,11 +200,11 @@
         </section>
 
         <!-- Visi Misi Section -->
-        <section class="py-20 bg-blue-50">
+        <section class="py-16 lg:py-20 bg-blue-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div
-                        class="bg-white p-8 rounded-lg shadow-japanese border-t-4 border-red-600"
+                        class="bg-white p-6 sm:p-8 rounded-lg shadow-japanese border-t-4 border-red-600"
                     >
                         <div class="text-4xl text-red-600 mb-4">
                             <i class="fas fa-eye"></i>
@@ -161,7 +218,7 @@
                         </p>
                     </div>
                     <div
-                        class="bg-white p-8 rounded-lg shadow-japanese border-t-4 border-blue-900"
+                        class="bg-white p-6 sm:p-8 rounded-lg shadow-japanese border-t-4 border-blue-900"
                     >
                         <div class="text-4xl text-blue-900 mb-4">
                             <i class="fas fa-bullseye"></i>
@@ -196,10 +253,10 @@
         </section>
 
         <!-- Pengurus & Pengajar Section -->
-        <section class="py-20 bg-white">
+        <section class="py-16 lg:py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                <div class="text-center mb-10 sm:mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
                         Pengurus & Pengajar
                     </h2>
                     <p class="text-lg text-gray-600">
@@ -383,9 +440,16 @@
                             </li>
                             <li>
                                 <a
-                                    href="index.html#program"
+                                    href="program.html"
                                     class="hover:text-red-600 transition"
                                     >Program Kelas</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="index.html#pendaftaran"
+                                    class="hover:text-red-600 transition"
+                                    >Pendaftaran</a
                                 >
                             </li>
                             <li>
@@ -461,9 +525,11 @@
         <!-- Profile Modal -->
         <div
             id="profileModal"
-            class="fixed inset-0 hidden z-50 items-center justify-center bg-black bg-opacity-50 px-4"
+            class="fixed inset-0 hidden z-50 items-center justify-center bg-black bg-opacity-50 px-4 py-6"
         >
-            <div class="bg-white rounded-lg max-w-2xl w-full p-6 relative">
+            <div
+                class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 relative"
+            >
                 <button
                     id="closeProfileModal"
                     class="absolute top-4 right-4 text-gray-500 text-3xl hover:text-red-600 transition"
@@ -475,7 +541,7 @@
                         id="modalImg"
                         src=""
                         alt=""
-                        class="w-40 h-40 rounded-lg object-cover shadow-japanese"
+                            class="w-32 h-32 sm:w-40 sm:h-40 mx-auto md:mx-0 rounded-lg object-cover shadow-japanese"
                     />
                     <div class="space-y-4">
                         <div>
@@ -516,6 +582,45 @@
         </div>
 
         <script>
+            const mobileMenuButton =
+                document.getElementById("mobileMenuButton");
+            const mobileMenu = document.getElementById("mobileMenu");
+            const mobileMenuIcon = document.getElementById("mobileMenuIcon");
+
+            function closeMobileMenu() {
+                if (!mobileMenu || !mobileMenuButton || !mobileMenuIcon) return;
+                mobileMenu.classList.add("hidden");
+                mobileMenuButton.setAttribute("aria-expanded", "false");
+                mobileMenuButton.setAttribute("aria-label", "Buka menu navigasi");
+                mobileMenuIcon.classList.add("fa-bars");
+                mobileMenuIcon.classList.remove("fa-times");
+            }
+
+            if (mobileMenuButton && mobileMenu && mobileMenuIcon) {
+                mobileMenuButton.addEventListener("click", () => {
+                    const isOpen = !mobileMenu.classList.contains("hidden");
+                    mobileMenu.classList.toggle("hidden");
+                    mobileMenuButton.setAttribute(
+                        "aria-expanded",
+                        String(!isOpen),
+                    );
+                    mobileMenuButton.setAttribute(
+                        "aria-label",
+                        isOpen ? "Buka menu navigasi" : "Tutup menu navigasi",
+                    );
+                    mobileMenuIcon.classList.toggle("fa-bars", isOpen);
+                    mobileMenuIcon.classList.toggle("fa-times", !isOpen);
+                });
+
+                mobileMenu.querySelectorAll("a").forEach((link) => {
+                    link.addEventListener("click", closeMobileMenu);
+                });
+
+                window.addEventListener("resize", () => {
+                    if (window.innerWidth >= 1280) closeMobileMenu();
+                });
+            }
+
             // Modal Profile Logic
             const profileModal = document.getElementById("profileModal");
             const closeProfileModal =
