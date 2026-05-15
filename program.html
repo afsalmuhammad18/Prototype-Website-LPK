@@ -1,0 +1,1078 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Program - Kayuki Nihongo Gakkou</title>
+        <link rel="icon" type="image/png" href="img/logo-kayuki.png" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+
+            .gradient-japanese {
+                background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            }
+
+            .shadow-japanese {
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            }
+
+            .button-hover-effect:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            }
+
+            .floating-whatsapp {
+                animation: float 3s ease-in-out infinite;
+            }
+
+            @keyframes float {
+                0%,
+                100% {
+                    transform: translateY(0px);
+                }
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+
+            .program-card {
+                transition: all 0.3s ease;
+            }
+
+            .program-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+            }
+
+            .placeholder-pattern {
+                background-image:
+                    radial-gradient(
+                        circle at 20% 20%,
+                        rgba(255, 255, 255, 0.55),
+                        transparent 24%
+                    ),
+                    radial-gradient(
+                        circle at 80% 0%,
+                        rgba(255, 255, 255, 0.45),
+                        transparent 30%
+                    );
+            }
+        </style>
+    </head>
+    <body class="bg-white text-gray-900 overflow-x-hidden">
+        <!-- Header & Navigasi (Sticky) -->
+        <header class="sticky top-0 z-50 bg-white shadow-japanese">
+            <nav
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex justify-between items-center gap-3"
+            >
+                <!-- Logo -->
+                <div class="flex items-center min-w-0">
+                    <a
+                        href="index.html"
+                        class="flex items-center min-w-0 gap-2 sm:gap-3 leading-tight"
+                    >
+                        <img
+                            src="img/logo-kayuki.png"
+                            alt="Logo Kayuki Nihongo Gakkou"
+                            class="h-11 w-11 sm:h-12 sm:w-12 object-contain shrink-0 rounded-full bg-white p-1 shadow-sm"
+                        />
+                        <span class="min-w-0">
+                            <span class="block text-base sm:text-lg lg:text-xl font-bold text-red-600 truncate">Kayuki</span>
+                            <span class="block text-[11px] sm:text-xs font-semibold tracking-wide text-blue-900 truncate">Nihongo Gakkou</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Menu Navigasi Desktop -->
+                <ul class="hidden xl:flex xl:items-center xl:space-x-8">
+                    <li>
+                        <a
+                            href="index.html#beranda"
+                            class="text-gray-700 hover:text-red-600 transition font-medium"
+                            >Beranda</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="tentang-kami.html"
+                            class="text-gray-700 hover:text-red-600 transition font-medium"
+                            >Tentang Kami</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="program.html"
+                            class="text-red-600 transition font-medium border-b-2 border-red-600"
+                            >Program</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="pendaftaran.html"
+                            class="text-gray-700 hover:text-red-600 transition font-medium"
+                            >Pendaftaran</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="index.html#dokumentasi"
+                            class="text-gray-700 hover:text-red-600 transition font-medium"
+                            >Dokumentasi</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="index.html#testimoni"
+                            class="text-gray-700 hover:text-red-600 transition font-medium"
+                            >Testimoni</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="index.html#kontak"
+                            class="text-gray-700 hover:text-red-600 transition font-medium"
+                            >Kontak</a
+                        >
+                    </li>
+                </ul>
+
+                <!-- Menu Toggle Mobile -->
+                <button
+                    id="mobileMenuButton"
+                    type="button"
+                    class="xl:hidden shrink-0 text-gray-700 text-2xl"
+                    aria-controls="mobileMenu"
+                    aria-expanded="false"
+                    aria-label="Buka menu navigasi"
+                >
+                    <i id="mobileMenuIcon" class="fas fa-bars"></i>
+                </button>
+            </nav>
+            <div
+                id="mobileMenu"
+                class="hidden xl:hidden border-t border-gray-100 bg-white"
+            >
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 space-y-1">
+                    <a
+                        href="index.html#beranda"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition"
+                        >Beranda</a
+                    >
+                    <a
+                        href="tentang-kami.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition"
+                        >Tentang Kami</a
+                    >
+                    <a
+                        href="program.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-red-600 bg-red-50"
+                        >Program</a
+                    >
+                    <a
+                        href="pendaftaran.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition"
+                        >Pendaftaran</a
+                    >
+                    <a
+                        href="index.html#dokumentasi"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition"
+                        >Dokumentasi</a
+                    >
+                    <a
+                        href="index.html#testimoni"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition"
+                        >Testimoni</a
+                    >
+                    <a
+                        href="index.html#kontak"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-red-600 transition"
+                        >Kontak</a
+                    >
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="gradient-japanese py-12 sm:py-20 lg:py-24">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center"
+                    >
+                        <div class="space-y-6">
+                            <p
+                                class="text-sm font-bold uppercase tracking-widest text-red-600"
+                            >
+                                Program Kayuki Nihongo Gakkou
+                            </p>
+                            <h1
+                                class="text-3xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
+                            >
+                                Program bahasa, magang, kerja, ToT, dan
+                                caregiver
+                            </h1>
+                            <p class="text-lg text-gray-600 leading-relaxed">
+                                Kayuki menyiapkan pembelajaran bahasa Jepang,
+                                persiapan Ginou Jisshu, Tokutei Ginou,
+                                Training of Trainer, serta beasiswa caregiver.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                                <a
+                                    href="#program-list"
+                                    class="button-hover-effect w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 flex items-center justify-center"
+                                >
+                                    <i class="fas fa-list-check mr-2"></i>Lihat
+                                    Program
+                                </a>
+                                <a
+                                    href="https://wa.me/62855555555555?text=Halo%2C%20saya%20ingin%20konsultasi%20mengenai%20program%20Kayuki"
+                                    target="_blank"
+                                    class="button-hover-effect w-full sm:w-auto bg-blue-900 hover:bg-blue-950 text-white font-bold py-3 px-8 rounded-lg transition duration-300 flex items-center justify-center"
+                                >
+                                    <i class="fab fa-whatsapp mr-2"></i
+                                    >Konsultasi Gratis
+                                </a>
+                            </div>
+                        </div>
+
+                        <div
+                            class="placeholder-pattern rounded-lg overflow-hidden shadow-japanese bg-gradient-to-br from-red-600 via-red-500 to-blue-900 min-h-[360px] flex items-center justify-center text-white"
+                            role="img"
+                            aria-label="Ilustrasi program Kayuki Nihongo Gakkou"
+                        >
+                            <div class="text-center px-8">
+                                <div
+                                    class="w-24 h-24 mx-auto mb-6 rounded-full bg-white bg-opacity-20 flex items-center justify-center"
+                                >
+                                    <i
+                                        class="fas fa-torii-gate text-5xl"
+                                    ></i>
+                                </div>
+                                <p class="text-2xl font-bold">
+                                    Program Kayuki
+                                </p>
+                                <p class="mt-2 text-white text-opacity-85">
+                                    Bahasa, studi, kerja, dan budaya Jepang
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ringkasan Program -->
+            <section class="py-10 bg-white border-y border-gray-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-red-50 text-red-600 flex items-center justify-center"
+                            >
+                                <i class="fas fa-book-open text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900">
+                                    Bahasa & Budaya
+                                </p>
+                                <p class="text-sm text-gray-600">
+                                    Pembelajaran bahasa Jepang, budaya, dan
+                                    etika komunikasi.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-blue-50 text-blue-900 flex items-center justify-center"
+                            >
+                                <i class="fas fa-briefcase text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900">
+                                    Studi & Kerja
+                                </p>
+                                <p class="text-sm text-gray-600">
+                                    Persiapan studi, magang, kerja, dan
+                                    wawancara.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-yellow-50 text-yellow-600 flex items-center justify-center"
+                            >
+                                <i class="fas fa-certificate text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900">
+                                    Job Matching
+                                </p>
+                                <p class="text-sm text-gray-600">
+                                    Pendampingan peluang kerja sesuai profil dan
+                                    kebutuhan mitra.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Daftar Program -->
+            <section id="program-list" class="py-16 lg:py-28 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-10 sm:mb-14">
+                        <h2
+                            class="text-3xl sm:text-5xl font-bold text-gray-900 mb-4"
+                        >
+                            Program Kayuki
+                        </h2>
+                        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                            Empat program utama Kayuki dirancang untuk
+                            kebutuhan belajar bahasa Jepang, magang, kerja,
+                            pengembangan pengajar, dan caregiver.
+                        </p>
+                    </div>
+
+                    <div class="space-y-8">
+                        <article
+                            class="program-card bg-white rounded-lg shadow-japanese overflow-hidden border border-gray-100"
+                        >
+                            <div class="grid grid-cols-1 lg:grid-cols-5">
+                                <div
+                                    class="placeholder-pattern lg:col-span-2 min-h-[260px] bg-gradient-to-br from-red-200 to-red-100 flex items-center justify-center text-red-600"
+                                    role="img"
+                                    aria-label="Persiapan Ginou Jisshu"
+                                >
+                                    <div class="text-center px-6">
+                                        <i class="fas fa-industry text-7xl text-red-400 mb-4"></i>
+                                        <p class="font-bold text-red-700">
+                                            Ginou Jisshu
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-3 p-6 sm:p-8">
+                                    <div
+                                        class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4"
+                                    >
+                                        <div>
+                                            <span class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-red-600 bg-red-50 px-3 py-1 rounded-full">
+                                                Magang Jepang
+                                            </span>
+                                            <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mt-3">
+                                                Persiapan Ginou Jisshu
+                                            </h3>
+                                        </div>
+                                        <button class="open-form-btn button-hover-effect w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300" data-program="Persiapan Ginou Jisshu">
+                                            Daftar Program
+                                        </button>
+                                    </div>
+
+                                    <p class="text-gray-600 leading-relaxed mb-6">
+                                        Program magang ke Jepang bagi lulusan
+                                        baru usia 18 hingga 25 tahun untuk
+                                        mendapatkan pengalaman kerja,
+                                        peningkatan keterampilan, dan pemahaman
+                                        budaya kerja Jepang.
+                                    </p>
+
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <div>
+                                            <h4 class="font-bold text-gray-900 mb-3">Fokus Program</h4>
+                                            <ul class="space-y-2 text-gray-600 text-sm">
+                                                <li><i class="fas fa-check text-red-600 mr-2"></i>Bahasa Jepang dasar hingga praktis.</li>
+                                                <li><i class="fas fa-check text-red-600 mr-2"></i>Budaya, disiplin, dan etika kerja Jepang.</li>
+                                                <li><i class="fas fa-check text-red-600 mr-2"></i>Persiapan seleksi dan keberangkatan.</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-gray-900 mb-3">Cocok Untuk</h4>
+                                            <p class="text-sm text-gray-600 leading-relaxed">
+                                                Lulusan baru yang ingin
+                                                membangun pengalaman kerja dan
+                                                keterampilan melalui program
+                                                magang di Jepang.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article
+                            class="program-card bg-white rounded-lg shadow-japanese overflow-hidden border border-gray-100"
+                        >
+                            <div class="grid grid-cols-1 lg:grid-cols-5">
+                                <div
+                                    class="placeholder-pattern lg:col-span-2 min-h-[260px] bg-gradient-to-br from-blue-200 to-blue-100 flex items-center justify-center text-blue-900"
+                                    role="img"
+                                    aria-label="Persiapan Tokutei Ginou"
+                                >
+                                    <div class="text-center px-6">
+                                        <i class="fas fa-briefcase text-7xl text-blue-400 mb-4"></i>
+                                        <p class="font-bold text-blue-900">
+                                            Tokutei Ginou
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-3 p-6 sm:p-8">
+                                    <div
+                                        class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4"
+                                    >
+                                        <div>
+                                            <span class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-blue-900 bg-blue-50 px-3 py-1 rounded-full">
+                                                Kerja Terampil
+                                            </span>
+                                            <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mt-3">
+                                                Persiapan Tokutei Ginou
+                                            </h3>
+                                        </div>
+                                        <button class="open-form-btn button-hover-effect w-full sm:w-auto bg-blue-900 hover:bg-blue-950 text-white font-bold py-3 px-6 rounded-lg transition duration-300" data-program="Persiapan Tokutei Ginou">
+                                            Daftar Program
+                                        </button>
+                                    </div>
+
+                                    <p class="text-gray-600 leading-relaxed mb-6">
+                                        Persiapan visa Tokutei Ginou bagi
+                                        kandidat yang memiliki pengetahuan,
+                                        keterampilan, atau pengalaman khusus
+                                        untuk bekerja di Jepang dalam kondisi
+                                        tertentu.
+                                    </p>
+
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <div>
+                                            <h4 class="font-bold text-gray-900 mb-3">Fokus Program</h4>
+                                            <ul class="space-y-2 text-gray-600 text-sm">
+                                                <li><i class="fas fa-check text-blue-900 mr-2"></i>Bahasa Jepang untuk lingkungan kerja.</li>
+                                                <li><i class="fas fa-check text-blue-900 mr-2"></i>Persiapan wawancara dan dokumen.</li>
+                                                <li><i class="fas fa-check text-blue-900 mr-2"></i>Budaya kerja dan komunikasi profesional.</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-gray-900 mb-3">Cocok Untuk</h4>
+                                            <p class="text-sm text-gray-600 leading-relaxed">
+                                                Kandidat yang menargetkan jalur
+                                                kerja terampil di Jepang melalui
+                                                skema Tokutei Ginou.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article
+                            class="program-card bg-white rounded-lg shadow-japanese overflow-hidden border border-gray-100"
+                        >
+                            <div class="grid grid-cols-1 lg:grid-cols-5">
+                                <div
+                                    class="placeholder-pattern lg:col-span-2 min-h-[260px] bg-gradient-to-br from-yellow-200 to-yellow-100 flex items-center justify-center text-yellow-700"
+                                    role="img"
+                                    aria-label="Kursus Bahasa Jepang dan Training of Trainer"
+                                >
+                                    <div class="text-center px-6">
+                                        <i class="fas fa-chalkboard-teacher text-7xl text-yellow-500 mb-4"></i>
+                                        <p class="font-bold text-yellow-700">
+                                            Bahasa Jepang & ToT
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-3 p-6 sm:p-8">
+                                    <div
+                                        class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4"
+                                    >
+                                        <div>
+                                            <span class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-yellow-700 bg-yellow-50 px-3 py-1 rounded-full">
+                                                Kursus & Pengajar
+                                            </span>
+                                            <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mt-3">
+                                                Kursus Bahasa Jepang & ToT
+                                            </h3>
+                                        </div>
+                                        <button class="open-form-btn button-hover-effect w-full sm:w-auto bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300" data-program="Kursus Bahasa Jepang & ToT">
+                                            Daftar Program
+                                        </button>
+                                    </div>
+
+                                    <p class="text-gray-600 leading-relaxed mb-6">
+                                        Program bahasa Jepang untuk siapa saja
+                                        yang ingin meningkatkan kompetensi dan
+                                        karier, serta Training of Trainer untuk
+                                        calon pengajar bahasa Jepang.
+                                    </p>
+
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <div>
+                                            <h4 class="font-bold text-gray-900 mb-3">Fokus Program</h4>
+                                            <ul class="space-y-2 text-gray-600 text-sm">
+                                                <li><i class="fas fa-check text-yellow-600 mr-2"></i>Bahasa Jepang umum dan aplikatif.</li>
+                                                <li><i class="fas fa-check text-yellow-600 mr-2"></i>Metode belajar kreatif dan interaktif.</li>
+                                                <li><i class="fas fa-check text-yellow-600 mr-2"></i>Dasar metode mengajar efektif untuk calon sensei.</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-gray-900 mb-3">Cocok Untuk</h4>
+                                            <p class="text-sm text-gray-600 leading-relaxed">
+                                                Pelajar, karyawan, calon pekerja
+                                                ke Jepang, serta calon pengajar
+                                                bahasa Jepang.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article
+                            class="program-card bg-white rounded-lg shadow-japanese overflow-hidden border border-gray-100"
+                        >
+                            <div class="grid grid-cols-1 lg:grid-cols-5">
+                                <div
+                                    class="placeholder-pattern lg:col-span-2 min-h-[260px] bg-gradient-to-br from-emerald-200 to-emerald-100 flex items-center justify-center text-emerald-700"
+                                    role="img"
+                                    aria-label="Persiapan Beasiswa Caregiver"
+                                >
+                                    <div class="text-center px-6">
+                                        <i class="fas fa-hand-holding-heart text-7xl text-emerald-500 mb-4"></i>
+                                        <p class="font-bold text-emerald-700">
+                                            Beasiswa Caregiver
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-3 p-6 sm:p-8">
+                                    <div
+                                        class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4"
+                                    >
+                                        <div>
+                                            <span class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full">
+                                                Caregiver
+                                            </span>
+                                            <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mt-3">
+                                                Persiapan Beasiswa Caregiver
+                                            </h3>
+                                        </div>
+                                        <button class="open-form-btn button-hover-effect w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300" data-program="Persiapan Beasiswa Caregiver">
+                                            Daftar Program
+                                        </button>
+                                    </div>
+
+                                    <p class="text-gray-600 leading-relaxed mb-6">
+                                        Program yang disusun untuk mendukung
+                                        calon peserta yang ingin belajar sambil
+                                        bekerja paruh waktu di fasilitas
+                                        kesehatan Jepang.
+                                    </p>
+
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <div>
+                                            <h4 class="font-bold text-gray-900 mb-3">Fokus Program</h4>
+                                            <ul class="space-y-2 text-gray-600 text-sm">
+                                                <li><i class="fas fa-check text-emerald-600 mr-2"></i>Bahasa Jepang untuk lingkungan kesehatan.</li>
+                                                <li><i class="fas fa-check text-emerald-600 mr-2"></i>Pengenalan etika layanan dan komunikasi.</li>
+                                                <li><i class="fas fa-check text-emerald-600 mr-2"></i>Persiapan belajar dan kerja paruh waktu.</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-gray-900 mb-3">Cocok Untuk</h4>
+                                            <p class="text-sm text-gray-600 leading-relaxed">
+                                                Kandidat yang ingin
+                                                mengembangkan kemampuan sebagai
+                                                profesional di bidang
+                                                keperawatan atau caregiver.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Prosedur -->
+            <section class="py-16 lg:py-24 gradient-japanese">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                        <div>
+                            <h2
+                                class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"
+                            >
+                                Prosedur Kayuki
+                            </h2>
+                            <p class="text-gray-600 leading-relaxed">
+                                Peserta didampingi melalui enam tahap utama:
+                                registrasi, wawancara, pelatihan, job matching,
+                                pemberkasan, dan pemberangkatan.
+                            </p>
+                        </div>
+                        <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-10 h-10 shrink-0 rounded-lg bg-red-600 text-white flex items-center justify-center font-bold"
+                                >
+                                    1
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-900 mb-1">
+                                        Registrasi
+                                    </h3>
+                                    <p class="text-sm text-gray-600">
+                                        Melengkapi formulir pendaftaran,
+                                        komitmen, CV/Risrekisho, dan dokumen
+                                        yang diperlukan.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-10 h-10 shrink-0 rounded-lg bg-blue-900 text-white flex items-center justify-center font-bold"
+                                >
+                                    2
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-900 mb-1">
+                                        Wawancara
+                                    </h3>
+                                    <p class="text-sm text-gray-600">
+                                        Seleksi calon siswa melalui wawancara,
+                                        uji kepribadian, dan evaluasi kesehatan.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-10 h-10 shrink-0 rounded-lg bg-yellow-500 text-white flex items-center justify-center font-bold"
+                                >
+                                    3
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-900 mb-1">
+                                        Pelatihan
+                                    </h3>
+                                    <p class="text-sm text-gray-600">
+                                        Pendidikan bahasa, budaya, etika kerja
+                                        Jepang, dan persiapan ujian bahasa.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-10 h-10 shrink-0 rounded-lg bg-gray-900 text-white flex items-center justify-center font-bold"
+                                >
+                                    4
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-900 mb-1">
+                                        Job Matching
+                                    </h3>
+                                    <p class="text-sm text-gray-600">
+                                        Pencarian pekerjaan dan wawancara
+                                        bersama user atau perwakilan perusahaan
+                                        Jepang.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-10 h-10 shrink-0 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-bold"
+                                >
+                                    5
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-900 mb-1">
+                                        Pemberkasan
+                                    </h3>
+                                    <p class="text-sm text-gray-600">
+                                        Penyelesaian dokumen setelah lulus
+                                        seleksi perusahaan hingga persiapan
+                                        keberangkatan.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-10 h-10 shrink-0 rounded-lg bg-red-600 text-white flex items-center justify-center font-bold"
+                                >
+                                    6
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-900 mb-1">
+                                        Pemberangkatan
+                                    </h3>
+                                    <p class="text-sm text-gray-600">
+                                        Setelah semua persiapan selesai, siswa
+                                        siap berangkat ke Jepang.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="py-16 bg-red-600 text-white">
+                <div
+                    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-8 lg:items-center lg:justify-between"
+                >
+                    <div>
+                        <h2 class="text-3xl sm:text-4xl font-bold mb-3">
+                            Masih bingung memilih program?
+                        </h2>
+                        <p class="text-white text-opacity-90 max-w-2xl">
+                            Hubungi tim Kayuki untuk konsultasi awal mengenai
+                            tujuan belajar, level bahasa, dan jalur karir yang
+                            paling sesuai.
+                        </p>
+                    </div>
+                    <button
+                        id="daftarNowBtn"
+                        class="button-hover-effect bg-white hover:bg-gray-100 text-red-600 font-bold py-3 px-8 rounded-lg transition duration-300 flex items-center justify-center"
+                    >
+                        <i class="fas fa-user-plus mr-2"></i>Daftar Sekarang
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer id="kontak" class="bg-gray-900 text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                    <!-- Informasi Alamat -->
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <img
+                                src="img/logo-kayuki.png"
+                                alt="Logo Kayuki Nihongo Gakkou"
+                                class="h-14 w-14 object-contain rounded-full bg-white p-1.5 shadow-sm"
+                            />
+                            <h3 class="text-2xl font-bold text-red-600">
+                                Kayuki Nihongo Gakkou
+                            </h3>
+                        </div>
+                        <div class="space-y-3 text-gray-300">
+                            <p class="flex items-start">
+                                <i
+                                    class="fas fa-map-marker-alt text-red-600 mr-3 mt-1"
+                                ></i>
+                                <span
+                                    >Jl. Imun Sulaeman, Pamoyanan, Kec.
+                                    Cianjur<br />Kabupaten Cianjur, Jawa Barat
+                                    43211<br />NIB: 2608250098473</span
+                                >
+                            </p>
+                            <p class="flex items-center">
+                                <i
+                                    class="fas fa-envelope text-red-600 mr-3"
+                                ></i>
+                                <a
+                                    href="mailto:info@kayuki.id"
+                                    class="hover:text-red-600 transition"
+                                    >info@kayuki.id</a
+                                >
+                            </p>
+                            <p class="flex items-center">
+                                <i class="fas fa-phone text-red-600 mr-3"></i>
+                                <a
+                                    href="tel:+6221555555"
+                                    class="hover:text-red-600 transition"
+                                    >(021) 555-5555</a
+                                >
+                            </p>
+                            <p class="flex items-center">
+                                <i
+                                    class="fas fa-whatsapp text-green-500 mr-3"
+                                ></i>
+                                <a
+                                    href="https://wa.me/62855555555555"
+                                    class="hover:text-green-500 transition"
+                                    >+62 855-555-5555</a
+                                >
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tautan Cepat -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-4 text-red-600">
+                            Tautan Cepat
+                        </h4>
+                        <ul class="space-y-3 text-gray-300">
+                            <li>
+                                <a
+                                    href="index.html#beranda"
+                                    class="hover:text-red-600 transition"
+                                    >Beranda</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="tentang-kami.html"
+                                    class="hover:text-red-600 transition"
+                                    >Tentang Kami</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="program.html"
+                                    class="hover:text-red-600 transition"
+                                    >Program Kelas</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="pendaftaran.html"
+                                    class="hover:text-red-600 transition"
+                                    >Pendaftaran</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="index.html#dokumentasi"
+                                    class="hover:text-red-600 transition"
+                                    >Dokumentasi</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="index.html#testimoni"
+                                    class="hover:text-red-600 transition"
+                                    >Testimoni Alumni</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="index.html#kontak"
+                                    class="hover:text-red-600 transition"
+                                    >Kontak</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Informasi Tambahan -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-4 text-red-600">
+                            Jam Operasional
+                        </h4>
+                        <ul class="space-y-3 text-gray-300">
+                            <li>Senin - Jumat: 08:00 - 20:00</li>
+                            <li>Sabtu: 08:00 - 18:00</li>
+                            <li>Minggu: Ditutup</li>
+                        </ul>
+                        <div class="mt-8">
+                            <h4 class="text-lg font-bold mb-4 text-red-600">
+                                Ikuti Kami
+                            </h4>
+                            <div class="flex space-x-4">
+                                <a
+                                    href="#"
+                                    class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition"
+                                >
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a
+                                    href="#"
+                                    class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition"
+                                >
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a
+                                    href="#"
+                                    class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition"
+                                >
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a
+                                    href="#"
+                                    class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition"
+                                >
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Garis Pembatas -->
+                <div class="border-t border-gray-700 pt-8">
+                    <p class="text-center text-gray-400">
+                        &copy; 2026 Kayuki Nihongo Gakkou. Semua Hak
+                        Dilindungi. |
+                        <a href="#" class="hover:text-red-600 transition"
+                            >Kebijakan Privasi</a
+                        >
+                        |
+                        <a href="#" class="hover:text-red-600 transition"
+                            >Syarat & Ketentuan</a
+                        >
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Form Modal -->
+        <div
+            id="formModal"
+            class="fixed inset-0 hidden z-50 items-center justify-center bg-black bg-opacity-50 px-4 py-6"
+        >
+            <div
+                class="bg-white rounded-lg max-w-lg w-full max-h-[90vh] overflow-y-auto p-6"
+            >
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-bold">Pendaftaran Kayuki</h3>
+                    <button id="closeFormModal" class="text-gray-500 text-2xl">
+                        &times;
+                    </button>
+                </div>
+                <form id="daftarForm" class="space-y-4">
+                    <input
+                        required
+                        name="name"
+                        id="fieldName"
+                        type="text"
+                        placeholder="Nama lengkap"
+                        class="w-full border border-gray-300 rounded px-3 py-2"
+                    />
+                    <input
+                        required
+                        name="address"
+                        id="fieldAddress"
+                        type="text"
+                        placeholder="Alamat lengkap"
+                        class="w-full border border-gray-300 rounded px-3 py-2"
+                    />
+                    <input
+                        required
+                        name="whatsapp"
+                        id="fieldWhatsapp"
+                        type="text"
+                        placeholder="Nomor WhatsApp (contoh: 08123456789)"
+                        class="w-full border border-gray-300 rounded px-3 py-2"
+                    />
+                    <input type="hidden" id="fieldProgram" name="program" />
+                    <div class="flex justify-end">
+                        <button
+                            type="submit"
+                            class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                        >
+                            Kirim via WhatsApp
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Floating WhatsApp Button -->
+        <a
+            href="https://wa.me/62855555555555"
+            target="_blank"
+            class="floating-whatsapp fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-40 w-14 h-14 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-japanese flex items-center justify-center transition duration-300"
+        >
+            <i class="fab fa-whatsapp text-2xl sm:text-3xl"></i>
+        </a>
+
+        <script>
+            const mobileMenuButton =
+                document.getElementById("mobileMenuButton");
+            const mobileMenu = document.getElementById("mobileMenu");
+            const mobileMenuIcon = document.getElementById("mobileMenuIcon");
+
+            function closeMobileMenu() {
+                if (!mobileMenu || !mobileMenuButton || !mobileMenuIcon) return;
+                mobileMenu.classList.add("hidden");
+                mobileMenuButton.setAttribute("aria-expanded", "false");
+                mobileMenuButton.setAttribute("aria-label", "Buka menu navigasi");
+                mobileMenuIcon.classList.add("fa-bars");
+                mobileMenuIcon.classList.remove("fa-times");
+            }
+
+            if (mobileMenuButton && mobileMenu && mobileMenuIcon) {
+                mobileMenuButton.addEventListener("click", () => {
+                    const isOpen = !mobileMenu.classList.contains("hidden");
+                    mobileMenu.classList.toggle("hidden");
+                    mobileMenuButton.setAttribute(
+                        "aria-expanded",
+                        String(!isOpen),
+                    );
+                    mobileMenuButton.setAttribute(
+                        "aria-label",
+                        isOpen ? "Buka menu navigasi" : "Tutup menu navigasi",
+                    );
+                    mobileMenuIcon.classList.toggle("fa-bars", isOpen);
+                    mobileMenuIcon.classList.toggle("fa-times", !isOpen);
+                });
+
+                mobileMenu.querySelectorAll("a").forEach((link) => {
+                    link.addEventListener("click", closeMobileMenu);
+                });
+
+                window.addEventListener("resize", () => {
+                    if (window.innerWidth >= 1280) closeMobileMenu();
+                });
+            }
+
+            const companyWa = "62855555555555";
+
+            const formModal = document.getElementById("formModal");
+            const closeFormModal = document.getElementById("closeFormModal");
+            const daftarNowBtn = document.getElementById("daftarNowBtn");
+            const daftarForm = document.getElementById("daftarForm");
+            const fieldName = document.getElementById("fieldName");
+            const fieldAddress = document.getElementById("fieldAddress");
+            const fieldWhatsapp = document.getElementById("fieldWhatsapp");
+            const fieldProgram = document.getElementById("fieldProgram");
+
+            function openFormModal(program) {
+                window.open("https://forms.gle/zn6dH2TFTjeL4eVu6", "_blank");
+            }
+
+            function closeForm() {
+                formModal.classList.remove("flex");
+                formModal.classList.add("hidden");
+            }
+
+            document.querySelectorAll(".open-form-btn").forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    openFormModal(btn.dataset.program || "");
+                });
+            });
+
+            if (daftarNowBtn) {
+                daftarNowBtn.addEventListener("click", () => {
+                    openFormModal("");
+                });
+            }
+
+            if (closeFormModal) {
+                closeFormModal.addEventListener("click", closeForm);
+            }
+
+            daftarForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+                const name = fieldName.value.trim();
+                const address = fieldAddress.value.trim();
+                const phone = fieldWhatsapp.value.trim();
+                const program = fieldProgram.value.trim();
+                const message = `Halo, saya ingin mendaftar${program ? " - " + program : ""}. Nama: ${name}. Alamat: ${address}. No. WhatsApp: ${phone}.`;
+                const url = `https://wa.me/${companyWa}?text=${encodeURIComponent(message)}`;
+                window.open(url, "_blank");
+                closeForm();
+                daftarForm.reset();
+            });
+
+            formModal.addEventListener("click", (e) => {
+                if (e.target === formModal) {
+                    closeForm();
+                }
+            });
+        </script>
+    </body>
+</html>
