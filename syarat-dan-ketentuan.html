@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Syarat dan ketentuan penggunaan layanan, website, informasi program, dan komunikasi Kayuki Nihongo Gakkou."
+        />
+        <title>Syarat dan Ketentuan - Kayuki Nihongo Gakkou</title>
+        <link rel="icon" type="image/png" href="img/logo-kayuki.png" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+
+            .gradient-japanese {
+                background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            }
+
+            .shadow-japanese {
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            }
+
+            .button-hover-effect {
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease,
+                    background-color 0.3s ease,
+                    color 0.3s ease;
+            }
+
+            .button-hover-effect:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            }
+
+            .floating-whatsapp {
+                animation: float 3s ease-in-out infinite;
+            }
+
+            @keyframes float {
+                0%,
+                100% {
+                    transform: translateY(0px);
+                }
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+
+            .policy-card {
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+            }
+
+            .policy-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+            }
+
+            .hero-pattern {
+                background-image:
+                    radial-gradient(
+                        circle at 18% 20%,
+                        rgba(37, 99, 235, 0.1),
+                        transparent 28%
+                    ),
+                    radial-gradient(
+                        circle at 84% 12%,
+                        rgba(30, 64, 175, 0.08),
+                        transparent 26%
+                    ),
+                    radial-gradient(
+                        circle at 72% 82%,
+                        rgba(250, 204, 21, 0.12),
+                        transparent 28%
+                    );
+            }
+        </style>
+    </head>
+    <body class="bg-white text-gray-900 overflow-x-hidden">
+        <!-- Header & Navigasi (Sticky) -->
+        <header class="sticky top-0 z-50 bg-white shadow-japanese">
+            <nav
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex justify-between items-center gap-3"
+            >
+                <!-- Logo -->
+                <div class="flex items-center min-w-0">
+                    <a
+                        href="index.html"
+                        class="flex items-center min-w-0 gap-2 sm:gap-3 leading-tight"
+                    >
+                        <img
+                            src="img/logo-kayuki.png"
+                            alt="Logo Kayuki Nihongo Gakkou"
+                            class="h-11 w-11 sm:h-12 sm:w-12 object-contain shrink-0 rounded-full bg-white p-1 shadow-sm"
+                        />
+                        <span class="min-w-0">
+                            <span
+                                class="block text-base sm:text-lg lg:text-xl font-bold text-blue-600 truncate"
+                                >Kayuki</span
+                            >
+                            <span
+                                class="block text-[11px] sm:text-xs font-semibold tracking-wide text-blue-900 truncate"
+                                >Nihongo Gakkou</span
+                            >
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Menu Navigasi Desktop -->
+                <ul class="hidden xl:flex xl:items-center xl:space-x-8">
+                    <li>
+                        <a
+                            href="index.html#beranda"
+                            class="text-gray-700 hover:text-blue-600 transition font-medium"
+                            >Beranda</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="tentang-kami.html"
+                            class="text-gray-700 hover:text-blue-600 transition font-medium"
+                            >Tentang Kami</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="program.html"
+                            class="text-gray-700 hover:text-blue-600 transition font-medium"
+                            >Program</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="pendaftaran.html"
+                            class="text-gray-700 hover:text-blue-600 transition font-medium"
+                            >Pendaftaran</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="dokumentasi.html"
+                            class="text-gray-700 hover:text-blue-600 transition font-medium"
+                            >Dokumentasi</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="testimoni.html"
+                            class="text-gray-700 hover:text-blue-600 transition font-medium"
+                            >Testimoni</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="kontak.html"
+                            class="text-gray-700 hover:text-blue-600 transition font-medium"
+                            >Kontak</a
+                        >
+                    </li>
+                </ul>
+
+                <!-- Menu Toggle Mobile -->
+                <button
+                    id="mobileMenuButton"
+                    type="button"
+                    class="xl:hidden shrink-0 text-gray-700 text-2xl"
+                    aria-controls="mobileMenu"
+                    aria-expanded="false"
+                    aria-label="Buka menu navigasi"
+                >
+                    <i id="mobileMenuIcon" class="fas fa-bars"></i>
+                </button>
+            </nav>
+            <div
+                id="mobileMenu"
+                class="hidden xl:hidden border-t border-gray-100 bg-white"
+            >
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 space-y-1">
+                    <a
+                        href="index.html#beranda"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                        >Beranda</a
+                    >
+                    <a
+                        href="tentang-kami.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                        >Tentang Kami</a
+                    >
+                    <a
+                        href="program.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                        >Program</a
+                    >
+                    <a
+                        href="pendaftaran.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                        >Pendaftaran</a
+                    >
+                    <a
+                        href="dokumentasi.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                        >Dokumentasi</a
+                    >
+                    <a
+                        href="testimoni.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                        >Testimoni</a
+                    >
+                    <a
+                        href="kontak.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                        >Kontak</a
+                    >
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="gradient-japanese hero-pattern py-12 sm:py-20 lg:py-24">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="max-w-4xl">
+                        <p
+                            class="text-sm font-bold uppercase tracking-widest text-blue-600"
+                        >
+                            Dokumen Layanan
+                        </p>
+                        <h1
+                            class="text-3xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mt-4"
+                        >
+                            Syarat dan Ketentuan
+                        </h1>
+                        <p class="text-lg text-gray-600 leading-relaxed mt-6">
+                            Ketentuan ini mengatur penggunaan website,
+                            informasi program, konsultasi, pendaftaran, dan
+                            komunikasi dengan Kayuki Nihongo Gakkou.
+                        </p>
+                        <div class="mt-6 flex flex-wrap gap-3">
+                            <span
+                                class="inline-flex items-center rounded-full bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-600"
+                            >
+                                <i class="fas fa-calendar-check mr-2"></i>
+                                Terakhir diperbarui: 16 Mei 2026
+                            </span>
+                            <span
+                                class="inline-flex items-center rounded-full bg-gray-100 px-4 py-2 text-sm font-semibold text-gray-700"
+                            >
+                                <i class="fas fa-building mr-2"></i>
+                                Kayuki Nihongo Gakkou
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Summary -->
+            <section class="py-10 bg-white border-y border-gray-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="policy-card rounded-lg bg-white p-6 shadow-japanese">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center text-xl mb-5"
+                            >
+                                <i class="fas fa-circle-info"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-gray-900">
+                                Informasi Program
+                            </h2>
+                            <p class="text-gray-600 leading-relaxed mt-2">
+                                Detail program dapat berubah mengikuti jadwal,
+                                kebutuhan kelas, dan informasi resmi Kayuki.
+                            </p>
+                        </div>
+                        <div class="policy-card rounded-lg bg-white p-6 shadow-japanese">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center text-xl mb-5"
+                            >
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-gray-900">
+                                Tanggung Jawab Peserta
+                            </h2>
+                            <p class="text-gray-600 leading-relaxed mt-2">
+                                Peserta wajib memberi data yang benar dan
+                                mengikuti arahan administrasi maupun belajar.
+                            </p>
+                        </div>
+                        <div class="policy-card rounded-lg bg-white p-6 shadow-japanese">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-yellow-50 text-yellow-600 flex items-center justify-center text-xl mb-5"
+                            >
+                                <i class="fas fa-shield-halved"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-gray-900">
+                                Privasi Data
+                            </h2>
+                            <p class="text-gray-600 leading-relaxed mt-2">
+                                Pengelolaan data pribadi dijelaskan lebih lanjut
+                                dalam halaman Kebijakan Privasi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Terms Content -->
+            <section class="py-16 lg:py-24 bg-blue-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8">
+                        <aside class="lg:sticky lg:top-28 self-start">
+                            <div class="rounded-lg bg-white p-6 shadow-japanese">
+                                <h2 class="font-bold text-gray-900 mb-4">
+                                    Daftar Isi
+                                </h2>
+                                <nav class="space-y-2 text-sm">
+                                    <a
+                                        href="#penerimaan"
+                                        class="block rounded-lg px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                                        >Penerimaan Ketentuan</a
+                                    >
+                                    <a
+                                        href="#layanan"
+                                        class="block rounded-lg px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                                        >Layanan dan Program</a
+                                    >
+                                    <a
+                                        href="#pendaftaran"
+                                        class="block rounded-lg px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                                        >Pendaftaran</a
+                                    >
+                                    <a
+                                        href="#pembayaran"
+                                        class="block rounded-lg px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                                        >Biaya dan Pembayaran</a
+                                    >
+                                    <a
+                                        href="#komunikasi"
+                                        class="block rounded-lg px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                                        >Komunikasi</a
+                                    >
+                                    <a
+                                        href="#perubahan"
+                                        class="block rounded-lg px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                                        >Perubahan Ketentuan</a
+                                    >
+                                </nav>
+                            </div>
+                        </aside>
+
+                        <div class="space-y-6">
+                            <article
+                                id="penerimaan"
+                                class="rounded-lg bg-white p-6 sm:p-8 shadow-japanese"
+                            >
+                                <h2 class="text-2xl font-bold text-gray-900">
+                                    1. Penerimaan Ketentuan
+                                </h2>
+                                <p class="text-gray-600 leading-relaxed mt-4">
+                                    Dengan mengakses website Kayuki, menghubungi
+                                    tim Kayuki, mengisi formulir, atau mengikuti
+                                    proses pendaftaran, pengguna dianggap telah
+                                    membaca dan menyetujui syarat dan ketentuan
+                                    ini.
+                                </p>
+                                <p class="text-gray-600 leading-relaxed mt-3">
+                                    Jika terdapat ketentuan khusus pada program,
+                                    kelas, kerja sama, atau dokumen pendaftaran,
+                                    maka ketentuan khusus tersebut berlaku
+                                    bersama dengan halaman ini.
+                                </p>
+                            </article>
+
+                            <article
+                                id="layanan"
+                                class="rounded-lg bg-white p-6 sm:p-8 shadow-japanese"
+                            >
+                                <h2 class="text-2xl font-bold text-gray-900">
+                                    2. Layanan dan Informasi Program
+                                </h2>
+                                <p class="text-gray-600 leading-relaxed mt-4">
+                                    Kayuki menyediakan informasi mengenai kelas
+                                    bahasa Jepang, pelatihan, konsultasi
+                                    program, dokumentasi kegiatan, dan informasi
+                                    terkait persiapan studi atau kerja ke Jepang.
+                                </p>
+                                <ul class="mt-4 space-y-3 text-gray-600">
+                                    <li class="flex gap-3">
+                                        <i
+                                            class="fas fa-check text-blue-600 mt-1"
+                                        ></i>
+                                        <span
+                                            >Informasi program dapat diperbarui
+                                            mengikuti kebutuhan operasional,
+                                            jadwal, ketersediaan kelas, dan
+                                            kebijakan lembaga.</span
+                                        >
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <i
+                                            class="fas fa-check text-blue-600 mt-1"
+                                        ></i>
+                                        <span
+                                            >Materi pada website bersifat
+                                            informatif dan tidak selalu memuat
+                                            seluruh rincian teknis program.</span
+                                        >
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <i
+                                            class="fas fa-check text-blue-600 mt-1"
+                                        ></i>
+                                        <span
+                                            >Informasi final terkait kelas,
+                                            biaya, jadwal, dan persyaratan
+                                            mengikuti konfirmasi resmi dari tim
+                                            Kayuki.</span
+                                        >
+                                    </li>
+                                </ul>
+                            </article>
+
+                            <article
+                                id="pendaftaran"
+                                class="rounded-lg bg-white p-6 sm:p-8 shadow-japanese"
+                            >
+                                <h2 class="text-2xl font-bold text-gray-900">
+                                    3. Pendaftaran dan Data Peserta
+                                </h2>
+                                <p class="text-gray-600 leading-relaxed mt-4">
+                                    Calon peserta bertanggung jawab memberikan
+                                    data yang benar, lengkap, dan dapat
+                                    dihubungi. Data tersebut dapat digunakan
+                                    untuk kebutuhan administrasi, konsultasi,
+                                    penjadwalan, dan tindak lanjut program.
+                                </p>
+                                <p class="text-gray-600 leading-relaxed mt-3">
+                                    Kayuki dapat meminta perbaikan data apabila
+                                    ditemukan informasi yang tidak lengkap atau
+                                    perlu dikonfirmasi. Pendaftaran dapat
+                                    ditunda apabila data atau persyaratan yang
+                                    dibutuhkan belum terpenuhi.
+                                </p>
+                            </article>
+
+                            <article
+                                id="pembayaran"
+                                class="rounded-lg bg-white p-6 sm:p-8 shadow-japanese"
+                            >
+                                <h2 class="text-2xl font-bold text-gray-900">
+                                    4. Biaya, Pembayaran, dan Administrasi
+                                </h2>
+                                <p class="text-gray-600 leading-relaxed mt-4">
+                                    Informasi biaya, metode pembayaran, jadwal
+                                    pembayaran, dan ketentuan administrasi
+                                    disampaikan melalui kanal resmi Kayuki.
+                                    Peserta disarankan menyimpan bukti
+                                    pembayaran dan memastikan pembayaran hanya
+                                    dilakukan ke rekening atau metode resmi yang
+                                    diinformasikan oleh Kayuki.
+                                </p>
+                                <p class="text-gray-600 leading-relaxed mt-3">
+                                    Ketentuan pengembalian dana, perubahan kelas,
+                                    atau penjadwalan ulang mengikuti kebijakan
+                                    program yang berlaku dan konfirmasi tertulis
+                                    dari tim Kayuki.
+                                </p>
+                            </article>
+
+                            <article
+                                id="komunikasi"
+                                class="rounded-lg bg-white p-6 sm:p-8 shadow-japanese"
+                            >
+                                <h2 class="text-2xl font-bold text-gray-900">
+                                    5. Komunikasi dan Kanal Resmi
+                                </h2>
+                                <p class="text-gray-600 leading-relaxed mt-4">
+                                    Kayuki dapat menghubungi calon peserta atau
+                                    peserta melalui WhatsApp, telepon, email,
+                                    formulir, atau kanal lain yang diberikan
+                                    oleh pengguna. Pengguna diharapkan memeriksa
+                                    kembali keaslian informasi apabila menerima
+                                    pesan yang mengatasnamakan Kayuki di luar
+                                    kanal resmi.
+                                </p>
+                                <div class="mt-5 rounded-lg bg-blue-50 p-5">
+                                    <p class="font-bold text-gray-900">
+                                        Kanal kontak utama:
+                                    </p>
+                                    <p class="text-gray-600 mt-2">
+                                        WhatsApp +62 855-555-5555 dan email
+                                        info@kayuki.id.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="rounded-lg bg-white p-6 sm:p-8 shadow-japanese">
+                                <h2 class="text-2xl font-bold text-gray-900">
+                                    6. Konten Website dan Hak Kekayaan
+                                    Intelektual
+                                </h2>
+                                <p class="text-gray-600 leading-relaxed mt-4">
+                                    Teks, desain, logo, foto, dokumentasi,
+                                    materi promosi, dan konten lain pada website
+                                    ini digunakan untuk kepentingan Kayuki.
+                                    Pengguna tidak diperkenankan menyalin,
+                                    menyebarkan, atau menggunakan konten tersebut
+                                    untuk kepentingan komersial tanpa izin
+                                    tertulis.
+                                </p>
+                            </article>
+
+                            <article class="rounded-lg bg-white p-6 sm:p-8 shadow-japanese">
+                                <h2 class="text-2xl font-bold text-gray-900">
+                                    7. Tautan dan Layanan Pihak Ketiga
+                                </h2>
+                                <p class="text-gray-600 leading-relaxed mt-4">
+                                    Website dapat memuat tautan ke layanan pihak
+                                    ketiga seperti WhatsApp, Google Forms,
+                                    Google Maps, YouTube, atau media sosial.
+                                    Penggunaan layanan tersebut mengikuti
+                                    ketentuan dan kebijakan privasi masing-masing
+                                    pihak ketiga.
+                                </p>
+                            </article>
+
+                            <article
+                                id="perubahan"
+                                class="rounded-lg bg-white p-6 sm:p-8 shadow-japanese"
+                            >
+                                <h2 class="text-2xl font-bold text-gray-900">
+                                    8. Perubahan Ketentuan
+                                </h2>
+                                <p class="text-gray-600 leading-relaxed mt-4">
+                                    Kayuki dapat memperbarui halaman ini dari
+                                    waktu ke waktu agar tetap sesuai dengan
+                                    kebutuhan layanan, operasional, dan
+                                    peraturan yang berlaku. Tanggal pembaruan
+                                    terakhir akan ditampilkan pada halaman ini.
+                                </p>
+                            </article>
+
+                            <article class="rounded-lg bg-blue-900 p-6 sm:p-8 shadow-japanese text-white">
+                                <h2 class="text-2xl font-bold">
+                                    Pertanyaan Terkait Ketentuan
+                                </h2>
+                                <p class="text-blue-100 leading-relaxed mt-4">
+                                    Jika ada hal yang perlu dikonfirmasi,
+                                    hubungi Kayuki sebelum melakukan pendaftaran
+                                    atau pembayaran.
+                                </p>
+                                <a
+                                    href="kontak.html"
+                                    class="button-hover-effect mt-6 inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-bold text-blue-600 hover:bg-gray-100"
+                                >
+                                    <i class="fas fa-envelope mr-2"></i>
+                                    Hubungi Kayuki
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer id="kontak" class="bg-gray-900 text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                    <!-- Informasi Alamat -->
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <img
+                                src="img/logo-kayuki.png"
+                                alt="Logo Kayuki Nihongo Gakkou"
+                                class="h-14 w-14 object-contain rounded-full bg-white p-1.5 shadow-sm"
+                            />
+                            <h3 class="text-2xl font-bold text-blue-600">
+                                Kayuki Nihongo Gakkou
+                            </h3>
+                        </div>
+                        <div class="space-y-3 text-gray-300">
+                            <p class="flex items-start">
+                                <i
+                                    class="fas fa-map-marker-alt text-blue-600 mr-3 mt-1"
+                                ></i>
+                                <span
+                                    >Jl. Imun Sulaeman, Pamoyanan, Kec.
+                                    Cianjur<br />Kabupaten Cianjur, Jawa Barat
+                                    43211<br />NIB: 2608250098473</span
+                                >
+                            </p>
+                            <p class="flex items-center">
+                                <i
+                                    class="fas fa-envelope text-blue-600 mr-3"
+                                ></i>
+                                <a
+                                    href="mailto:info@kayuki.id"
+                                    class="hover:text-blue-600 transition"
+                                    >info@kayuki.id</a
+                                >
+                            </p>
+                            <p class="flex items-center">
+                                <i class="fas fa-phone text-blue-600 mr-3"></i>
+                                <a
+                                    href="tel:+6221555555"
+                                    class="hover:text-blue-600 transition"
+                                    >(021) 555-5555</a
+                                >
+                            </p>
+                            <p class="flex items-center">
+                                <i
+                                    class="fas fa-whatsapp text-green-500 mr-3"
+                                ></i>
+                                <a
+                                    href="https://wa.me/62855555555555"
+                                    class="hover:text-green-500 transition"
+                                    >+62 855-555-5555</a
+                                >
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tautan Cepat -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-4 text-blue-600">
+                            Tautan Cepat
+                        </h4>
+                        <ul class="space-y-3 text-gray-300">
+                            <li>
+                                <a
+                                    href="index.html#beranda"
+                                    class="hover:text-blue-600 transition"
+                                    >Beranda</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="tentang-kami.html"
+                                    class="hover:text-blue-600 transition"
+                                    >Tentang Kami</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="program.html"
+                                    class="hover:text-blue-600 transition"
+                                    >Program Kelas</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="pendaftaran.html"
+                                    class="hover:text-blue-600 transition"
+                                    >Pendaftaran</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="dokumentasi.html"
+                                    class="hover:text-blue-600 transition"
+                                    >Dokumentasi</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="testimoni.html"
+                                    class="hover:text-blue-600 transition"
+                                    >Testimoni Alumni</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="kontak.html"
+                                    class="hover:text-blue-600 transition"
+                                    >Kontak</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Informasi Tambahan -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-4 text-blue-600">
+                            Jam Operasional
+                        </h4>
+                        <ul class="space-y-3 text-gray-300">
+                            <li>Senin - Jumat: 08:00 - 20:00</li>
+                            <li>Sabtu: 08:00 - 18:00</li>
+                            <li>Minggu: Ditutup</li>
+                        </ul>
+                        <div class="mt-8">
+                            <h4 class="text-lg font-bold mb-4 text-blue-600">
+                                Ikuti Kami
+                            </h4>
+                            <div class="flex space-x-4">
+                                <a
+                                    href="#"
+                                    class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition"
+                                >
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a
+                                    href="#"
+                                    class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition"
+                                >
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a
+                                    href="#"
+                                    class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition"
+                                >
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a
+                                    href="#"
+                                    class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition"
+                                >
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Garis Pembatas -->
+                <div class="border-t border-gray-700 pt-8">
+                    <p class="text-center text-gray-400">
+                        &copy; 2026 Kayuki Nihongo Gakkou. Semua Hak
+                        Dilindungi. |
+                        <a
+                            href="kebijakan-privasi.html"
+                            class="hover:text-blue-600 transition"
+                            >Kebijakan Privasi</a
+                        >
+                        |
+                        <a
+                            href="syarat-dan-ketentuan.html"
+                            class="hover:text-blue-600 transition"
+                            >Syarat & Ketentuan</a
+                        >
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Floating WhatsApp Button -->
+        <a
+            href="https://wa.me/62855555555555"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="floating-whatsapp fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-40 w-14 h-14 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-japanese flex items-center justify-center transition duration-300"
+            aria-label="Hubungi Kayuki melalui WhatsApp"
+        >
+            <i class="fab fa-whatsapp text-2xl sm:text-3xl"></i>
+        </a>
+
+        <script>
+            const mobileMenuButton =
+                document.getElementById("mobileMenuButton");
+            const mobileMenu = document.getElementById("mobileMenu");
+            const mobileMenuIcon = document.getElementById("mobileMenuIcon");
+
+            function closeMobileMenu() {
+                if (!mobileMenu || !mobileMenuButton || !mobileMenuIcon) return;
+                mobileMenu.classList.add("hidden");
+                mobileMenuButton.setAttribute("aria-expanded", "false");
+                mobileMenuButton.setAttribute(
+                    "aria-label",
+                    "Buka menu navigasi",
+                );
+                mobileMenuIcon.classList.add("fa-bars");
+                mobileMenuIcon.classList.remove("fa-times");
+            }
+
+            if (mobileMenuButton && mobileMenu && mobileMenuIcon) {
+                mobileMenuButton.addEventListener("click", () => {
+                    const isOpen = !mobileMenu.classList.contains("hidden");
+                    mobileMenu.classList.toggle("hidden");
+                    mobileMenuButton.setAttribute(
+                        "aria-expanded",
+                        String(!isOpen),
+                    );
+                    mobileMenuButton.setAttribute(
+                        "aria-label",
+                        isOpen ? "Buka menu navigasi" : "Tutup menu navigasi",
+                    );
+                    mobileMenuIcon.classList.toggle("fa-bars", isOpen);
+                    mobileMenuIcon.classList.toggle("fa-times", !isOpen);
+                });
+
+                mobileMenu.querySelectorAll("a").forEach((link) => {
+                    link.addEventListener("click", closeMobileMenu);
+                });
+
+                window.addEventListener("resize", () => {
+                    if (window.innerWidth >= 1280) closeMobileMenu();
+                });
+            }
+        </script>
+    </body>
+</html>
