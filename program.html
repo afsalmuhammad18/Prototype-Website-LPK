@@ -84,8 +84,14 @@
                             class="h-11 w-11 sm:h-12 sm:w-12 object-contain shrink-0 rounded-full bg-white p-1 shadow-sm"
                         />
                         <span class="min-w-0">
-                            <span class="block text-base sm:text-lg lg:text-xl font-bold text-blue-600 truncate">Kayuki</span>
-                            <span class="block text-[11px] sm:text-xs font-semibold tracking-wide text-blue-900 truncate">Nihongo Gakkou</span>
+                            <span
+                                class="block text-base sm:text-lg lg:text-xl font-bold text-blue-600 truncate"
+                                >Kayuki</span
+                            >
+                            <span
+                                class="block text-[11px] sm:text-xs font-semibold tracking-wide text-blue-900 truncate"
+                                >Nihongo Gakkou</span
+                            >
                         </span>
                     </a>
                 </div>
@@ -113,12 +119,29 @@
                             >Program</a
                         >
                     </li>
-                    <li>
-                        <a
-                            href="pendaftaran.html"
-                            class="text-gray-700 hover:text-blue-600 transition font-medium"
-                            >Pendaftaran</a
+                    <li class="relative group py-2">
+                        <button
+                            type="button"
+                            class="inline-flex items-center gap-1 text-gray-700 hover:text-blue-600 transition font-medium"
+                            aria-haspopup="true"
                         >
+                            <span>Pendaftaran</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div
+                            class="invisible absolute left-0 top-full z-50 w-56 translate-y-2 rounded-lg border border-gray-100 bg-white p-2 opacity-0 shadow-japanese transition duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100"
+                        >
+                            <a
+                                href="pendaftaran.html"
+                                class="block rounded-md px-4 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                                >Daftar Kelas</a
+                            >
+                            <a
+                                href="daftar-job-matching.html"
+                                class="block rounded-md px-4 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                                >Daftar Job Matching</a
+                            >
+                        </div>
                     </li>
                     <li>
                         <a
@@ -175,11 +198,21 @@
                         class="block rounded-lg px-3 py-2 text-sm font-medium text-blue-600 bg-blue-50"
                         >Program</a
                     >
-                    <a
-                        href="pendaftaran.html"
-                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
-                        >Pendaftaran</a
-                    >
+                    <div class="px-3 pt-3 pb-1 text-xs font-bold uppercase tracking-widest text-gray-400">
+                        Pendaftaran
+                    </div>
+                    <div class="space-y-1 border-l-2 border-blue-100 pl-3">
+                        <a
+                            href="pendaftaran.html"
+                            class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                            >Daftar Kelas</a
+                        >
+                        <a
+                            href="daftar-job-matching.html"
+                            class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                            >Daftar Job Matching</a
+                        >
+                    </div>
                     <a
                         href="dokumentasi.html"
                         class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"

@@ -1,0 +1,1143 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Daftar Job Matching Jepang bersama Kayuki Nihongo Gakkou untuk program Kaigo dan Pertanian."
+        />
+        <title>Daftar Job Matching - Kayuki Nihongo Gakkou</title>
+        <link rel="icon" type="image/png" href="img/logo-kayuki.png" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+
+            .gradient-japanese {
+                background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            }
+
+            .shadow-japanese {
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            }
+
+            .button-hover-effect {
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease,
+                    background-color 0.3s ease;
+            }
+
+            .button-hover-effect:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            }
+
+            .floating-whatsapp {
+                animation: float 3s ease-in-out infinite;
+            }
+
+            @keyframes float {
+                0%,
+                100% {
+                    transform: translateY(0px);
+                }
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+
+            .program-card {
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+            }
+
+            .program-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+            }
+
+            .hero-pattern {
+                background-image:
+                    radial-gradient(
+                        circle at 20% 20%,
+                        rgba(37, 99, 235, 0.1),
+                        transparent 28%
+                    ),
+                    radial-gradient(
+                        circle at 78% 12%,
+                        rgba(220, 38, 38, 0.08),
+                        transparent 24%
+                    ),
+                    radial-gradient(
+                        circle at 70% 82%,
+                        rgba(245, 158, 11, 0.12),
+                        transparent 28%
+                    );
+            }
+        </style>
+    </head>
+    <body class="bg-white text-gray-900 overflow-x-hidden">
+        <!-- Header & Navigasi (Sticky) -->
+        <header class="sticky top-0 z-50 bg-white shadow-japanese">
+            <nav
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex justify-between items-center gap-3"
+            >
+                <!-- Logo -->
+                <div class="flex items-center min-w-0">
+                    <a
+                        href="index.html"
+                        class="flex items-center min-w-0 gap-2 sm:gap-3 leading-tight"
+                    >
+                        <img
+                            src="img/logo-kayuki.png"
+                            alt="Logo Kayuki Nihongo Gakkou"
+                            class="h-11 w-11 sm:h-12 sm:w-12 object-contain shrink-0 rounded-full bg-white p-1 shadow-sm"
+                        />
+                        <span class="min-w-0">
+                            <span
+                                class="block text-base sm:text-lg lg:text-xl font-bold text-blue-600 truncate"
+                                >Kayuki</span
+                            >
+                            <span
+                                class="block text-[11px] sm:text-xs font-semibold tracking-wide text-blue-900 truncate"
+                                >Nihongo Gakkou</span
+                            >
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Menu Navigasi Desktop -->
+                <ul class="hidden xl:flex xl:items-center xl:space-x-8">
+                    <li>
+                        <a
+                            href="index.html"
+                            class="text-gray-700 hover:text-blue-600 transition font-medium"
+                            >Beranda</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="tentang-kami.html"
+                            class="text-gray-700 hover:text-blue-600 transition font-medium"
+                            >Tentang Kami</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="program.html"
+                            class="text-gray-700 hover:text-blue-600 transition font-medium"
+                            >Program</a
+                        >
+                    </li>
+                    <li class="relative group py-2">
+                        <button
+                            type="button"
+                            class="inline-flex items-center gap-1 text-blue-600 transition font-medium border-b-2 border-blue-600 pb-1"
+                            aria-haspopup="true"
+                        >
+                            <span>Pendaftaran</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div
+                            class="invisible absolute left-0 top-full z-50 w-56 translate-y-2 rounded-lg border border-gray-100 bg-white p-2 opacity-0 shadow-japanese transition duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100"
+                        >
+                            <a
+                                href="pendaftaran.html"
+                                class="block rounded-md px-4 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                                >Daftar Kelas</a
+                            >
+                            <a
+                                href="daftar-job-matching.html"
+                                class="block rounded-md bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-600"
+                                >Daftar Job Matching</a
+                            >
+                        </div>
+                    </li>
+                    <li>
+                        <a
+                            href="dokumentasi.html"
+                            class="text-gray-700 hover:text-blue-600 transition font-medium"
+                            >Dokumentasi</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="testimoni.html"
+                            class="text-gray-700 hover:text-blue-600 transition font-medium"
+                            >Testimoni</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="kontak.html"
+                            class="text-gray-700 hover:text-blue-600 transition font-medium"
+                            >Kontak</a
+                        >
+                    </li>
+                </ul>
+
+                <!-- Menu Toggle Mobile -->
+                <button
+                    id="mobileMenuButton"
+                    type="button"
+                    class="xl:hidden shrink-0 text-gray-700 text-2xl"
+                    aria-controls="mobileMenu"
+                    aria-expanded="false"
+                    aria-label="Buka menu navigasi"
+                >
+                    <i id="mobileMenuIcon" class="fas fa-bars"></i>
+                </button>
+            </nav>
+            <div
+                id="mobileMenu"
+                class="hidden xl:hidden border-t border-gray-100 bg-white"
+            >
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 space-y-1">
+                    <a
+                        href="index.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                        >Beranda</a
+                    >
+                    <a
+                        href="tentang-kami.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                        >Tentang Kami</a
+                    >
+                    <a
+                        href="program.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                        >Program</a
+                    >
+                    <div
+                        class="px-3 pt-3 pb-1 text-xs font-bold uppercase tracking-widest text-gray-400"
+                    >
+                        Pendaftaran
+                    </div>
+                    <div class="space-y-1 border-l-2 border-blue-100 pl-3">
+                        <a
+                            href="pendaftaran.html"
+                            class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                            >Daftar Kelas</a
+                        >
+                        <a
+                            href="daftar-job-matching.html"
+                            class="block rounded-lg px-3 py-2 text-sm font-semibold text-blue-600 bg-blue-50"
+                            >Daftar Job Matching</a
+                        >
+                    </div>
+                    <a
+                        href="dokumentasi.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                        >Dokumentasi</a
+                    >
+                    <a
+                        href="testimoni.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                        >Testimoni</a
+                    >
+                    <a
+                        href="kontak.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                        >Kontak</a
+                    >
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="gradient-japanese hero-pattern py-12 sm:py-20">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-12 items-center"
+                    >
+                        <div class="space-y-6">
+                            <p
+                                class="text-sm font-bold uppercase tracking-widest text-blue-600"
+                            >
+                                Daftar Job Matching Jepang
+                            </p>
+                            <h1
+                                class="text-3xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
+                            >
+                                Peluang kerja Jepang untuk Kaigo dan Pertanian
+                            </h1>
+                            <p class="text-lg text-gray-600 leading-relaxed">
+                                Kayuki membantu kandidat menyiapkan dokumen,
+                                bahasa, dan kesiapan interview untuk program
+                                Job Matching Jepang.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <a
+                                    href="https://forms.gle/Cnbf2oqy5tvMk3yP9"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="button-hover-effect inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-bold text-white hover:bg-blue-700"
+                                >
+                                    Daftar Sekarang
+                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <a
+                                    href="#program-job"
+                                    class="button-hover-effect inline-flex items-center justify-center gap-2 rounded-lg border border-blue-200 bg-white px-6 py-3 font-bold text-blue-600 hover:bg-blue-50"
+                                >
+                                    Lihat Program
+                                    <i class="fas fa-chevron-down"></i>
+                                </a>
+                            </div>
+                            <div
+                                class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2"
+                            >
+                                <div
+                                    class="rounded-lg border border-gray-100 bg-white p-4 shadow-sm"
+                                >
+                                    <p
+                                        class="text-sm font-semibold text-gray-500"
+                                    >
+                                        Kaigo
+                                    </p>
+                                    <p class="mt-1 text-2xl font-bold">
+                                        300 orang
+                                    </p>
+                                </div>
+                                <div
+                                    class="rounded-lg border border-gray-100 bg-white p-4 shadow-sm"
+                                >
+                                    <p
+                                        class="text-sm font-semibold text-gray-500"
+                                    >
+                                        Pertanian
+                                    </p>
+                                    <p class="mt-1 text-2xl font-bold">
+                                        100 orang
+                                    </p>
+                                </div>
+                                <div
+                                    class="rounded-lg border border-gray-100 bg-white p-4 shadow-sm"
+                                >
+                                    <p
+                                        class="text-sm font-semibold text-gray-500"
+                                    >
+                                        Level
+                                    </p>
+                                    <p class="mt-1 text-2xl font-bold">N4</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 items-start">
+                            <img
+                                src="img/kaigo.jpeg"
+                                alt="Poster Job Order Kaigo Jepang Kayuki"
+                                class="w-full rounded-lg border border-white bg-white object-cover shadow-japanese"
+                            />
+                            <img
+                                src="img/pertanian.jpeg"
+                                alt="Poster Job Pertanian Jepang Kayuki"
+                                class="mt-8 w-full rounded-lg border border-white bg-white object-cover shadow-japanese"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Program Overview -->
+            <section id="program-job" class="py-16 lg:py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-10">
+                        <p
+                            class="text-sm font-bold uppercase tracking-widest text-blue-600"
+                        >
+                            Pilihan Job Matching
+                        </p>
+                        <h2
+                            class="mt-3 text-3xl sm:text-4xl font-bold text-gray-900"
+                        >
+                            Pilih program yang sesuai dengan target kerja kamu
+                        </h2>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <a
+                            href="#kaigo"
+                            class="program-card rounded-lg border border-gray-100 bg-white p-6 shadow-japanese"
+                        >
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600"
+                                >
+                                    <i class="fas fa-hand-holding-medical"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold">
+                                        Job Order Kaigo Jepang
+                                    </h3>
+                                    <p class="mt-2 text-gray-600">
+                                        Penempatan Aichi, Gifu, Mie dengan
+                                        program Tokutei Ginou / SSW Kaigo.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                        <a
+                            href="#pertanian"
+                            class="program-card rounded-lg border border-gray-100 bg-white p-6 shadow-japanese"
+                        >
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-amber-50 text-amber-600"
+                                >
+                                    <i class="fas fa-seedling"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold">
+                                        Job Pertanian Jepang
+                                    </h3>
+                                    <p class="mt-2 text-gray-600">
+                                        Kelas baru pemberangkatan Januari 2027
+                                        untuk kandidat level N4.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Kaigo Section -->
+            <section id="kaigo" class="py-16 lg:py-20 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] gap-10 lg:gap-12 items-start"
+                    >
+                        <div>
+                            <img
+                                src="img/kaigo.jpeg"
+                                alt="Informasi Job Order Kaigo Jepang"
+                                class="w-full rounded-lg bg-white shadow-japanese"
+                            />
+                        </div>
+                        <div class="space-y-8">
+                            <div>
+                                <p
+                                    class="text-sm font-bold uppercase tracking-widest text-blue-600"
+                                >
+                                    JOB ORDER KAIGO JEPANG
+                                </p>
+                                <h2
+                                    class="mt-3 text-3xl sm:text-4xl font-bold text-gray-900"
+                                >
+                                    Gaji besar untuk karir Kaigo profesional
+                                </h2>
+                                <p class="mt-4 text-lg text-gray-600">
+                                    Siapkan masa depanmu bersama karir Jepang
+                                    profesional.
+                                </p>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                <div
+                                    class="rounded-lg border border-gray-100 bg-white p-4 shadow-sm"
+                                >
+                                    <p
+                                        class="text-sm font-semibold text-gray-500"
+                                    >
+                                        Penempatan
+                                    </p>
+                                    <p class="mt-1 font-bold">
+                                        Aichi, Gifu, Mie
+                                    </p>
+                                </div>
+                                <div
+                                    class="rounded-lg border border-gray-100 bg-white p-4 shadow-sm"
+                                >
+                                    <p
+                                        class="text-sm font-semibold text-gray-500"
+                                    >
+                                        Dibutuhkan
+                                    </p>
+                                    <p class="mt-1 font-bold">300 orang</p>
+                                </div>
+                                <div
+                                    class="rounded-lg border border-gray-100 bg-white p-4 shadow-sm"
+                                >
+                                    <p
+                                        class="text-sm font-semibold text-gray-500"
+                                    >
+                                        Program
+                                    </p>
+                                    <p class="mt-1 font-bold">
+                                        Tokutei Ginou / SSW Kaigo
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div
+                                    class="rounded-lg border border-gray-100 bg-white p-6 shadow-sm"
+                                >
+                                    <h3 class="text-xl font-bold">
+                                        Gaji Pokok Besar
+                                    </h3>
+                                    <ul class="mt-4 space-y-3 text-gray-600">
+                                        <li class="flex gap-3">
+                                            <i
+                                                class="fas fa-check-circle mt-1 text-blue-600"
+                                            ></i>
+                                            <span
+                                                >Gaji pokok:
+                                                <strong
+                                                    >&plusmn; &yen;192.000 /
+                                                    bulan</strong
+                                                ></span
+                                            >
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <i
+                                                class="fas fa-check-circle mt-1 text-blue-600"
+                                            ></i>
+                                            <span
+                                                >Dengan shift malam bisa
+                                                mencapai:
+                                                <strong
+                                                    >&plusmn; &yen;222.000 /
+                                                    bulan</strong
+                                                ></span
+                                            >
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <i
+                                                class="fas fa-check-circle mt-1 text-blue-600"
+                                            ></i>
+                                            <span>Tunjangan lembur tersedia</span>
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <i
+                                                class="fas fa-check-circle mt-1 text-blue-600"
+                                            ></i>
+                                            <span>Bonus tersedia</span>
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <i
+                                                class="fas fa-check-circle mt-1 text-blue-600"
+                                            ></i>
+                                            <span>Kenaikan gaji tersedia</span>
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <i
+                                                class="fas fa-check-circle mt-1 text-blue-600"
+                                            ></i>
+                                            <span>Asuransi lengkap Jepang</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="rounded-lg border border-gray-100 bg-white p-6 shadow-sm"
+                                >
+                                    <h3 class="text-xl font-bold">
+                                        Persyaratan
+                                    </h3>
+                                    <ul class="mt-4 space-y-3 text-gray-600">
+                                        <li class="flex gap-3">
+                                            <i
+                                                class="fas fa-check-circle mt-1 text-blue-600"
+                                            ></i>
+                                            <span>Pria / Wanita</span>
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <i
+                                                class="fas fa-check-circle mt-1 text-blue-600"
+                                            ></i>
+                                            <span
+                                                >Memiliki kemampuan Bahasa
+                                                Jepang</span
+                                            >
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <i
+                                                class="fas fa-check-circle mt-1 text-blue-600"
+                                            ></i>
+                                            <span
+                                                >Pengalaman Kaigo menjadi nilai
+                                                plus</span
+                                            >
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <i
+                                                class="fas fa-check-circle mt-1 text-blue-600"
+                                            ></i>
+                                            <span
+                                                >Siap kerja di Jepang dalam
+                                                jangka panjang</span
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div
+                                    class="rounded-lg border border-blue-100 bg-blue-50 p-4"
+                                >
+                                    <i class="fas fa-clock text-blue-600"></i>
+                                    <p class="mt-2 font-bold">
+                                        Sistem kerja shift
+                                    </p>
+                                </div>
+                                <div
+                                    class="rounded-lg border border-blue-100 bg-blue-50 p-4"
+                                >
+                                    <i class="fas fa-house text-blue-600"></i>
+                                    <p class="mt-2 font-bold">
+                                        Tersedia asrama
+                                    </p>
+                                </div>
+                                <div
+                                    class="rounded-lg border border-blue-100 bg-blue-50 p-4"
+                                >
+                                    <i
+                                        class="fas fa-calendar-check text-blue-600"
+                                    ></i>
+                                    <p class="mt-2 font-bold">
+                                        Libur tahunan lengkap
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="rounded-lg border border-amber-200 bg-amber-50 p-6"
+                            >
+                                <h3
+                                    class="flex items-center gap-3 text-xl font-bold text-amber-900"
+                                >
+                                    <i class="fas fa-triangle-exclamation"></i>
+                                    Catatan Penting
+                                </h3>
+                                <p class="mt-3 text-amber-900">
+                                    N4 boleh apply, namun mensetsu / interview
+                                    tergolong berat karena gaji besar.
+                                    Perusahaan mencari kandidat yang serius,
+                                    mental kuat, komunikasi bagus, dan siap
+                                    kerja profesional di Jepang.
+                                </p>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div
+                                    class="rounded-lg border border-gray-100 bg-white p-6 shadow-sm"
+                                >
+                                    <h3 class="text-xl font-bold">
+                                        Kesempatan Emas
+                                    </h3>
+                                    <p class="mt-3 text-gray-600">
+                                        Untuk yang ingin karir dan penghasilan
+                                        besar di Jepang. Kuota sangat banyak,
+                                        peluang lolos lebih besar bagi kandidat
+                                        yang siap interview dengan matang.
+                                    </p>
+                                </div>
+                                <div
+                                    class="rounded-lg border border-gray-100 bg-white p-6 shadow-sm"
+                                >
+                                    <h3 class="text-xl font-bold">
+                                        Segera Kirim
+                                    </h3>
+                                    <ul class="mt-3 space-y-2 text-gray-600">
+                                        <li>CV lengkap</li>
+                                        <li>Sertifikat Bahasa Jepang</li>
+                                        <li>Sertifikat SSW / Kaigo</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div
+                                class="rounded-lg bg-blue-600 p-6 text-white shadow-japanese"
+                            >
+                                <div
+                                    class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5"
+                                >
+                                    <div>
+                                        <p class="text-blue-100">Kode Loker</p>
+                                        <p
+                                            class="text-3xl font-bold tracking-wide"
+                                        >
+                                            PI1505
+                                        </p>
+                                    </div>
+                                    <a
+                                        href="https://forms.gle/Cnbf2oqy5tvMk3yP9"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="button-hover-effect inline-flex items-center justify-center gap-2 rounded-lg bg-white px-6 py-3 font-bold text-blue-600 hover:bg-blue-50"
+                                    >
+                                        Daftar Job Matching
+                                        <i
+                                            class="fas fa-arrow-up-right-from-square"
+                                        ></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pertanian Section -->
+            <section id="pertanian" class="py-16 lg:py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-[1.12fr_0.88fr] gap-10 lg:gap-12 items-start"
+                    >
+                        <div class="space-y-8">
+                            <div>
+                                <p
+                                    class="text-sm font-bold uppercase tracking-widest text-blue-600"
+                                >
+                                    Job Pertanian Jepang
+                                </p>
+                                <h2
+                                    class="mt-3 text-3xl sm:text-4xl font-bold text-gray-900"
+                                >
+                                    Dibuka kelas baru pemberangkatan Januari
+                                    2027
+                                </h2>
+                                <p class="mt-4 text-lg text-gray-600">
+                                    Program dari Kayuki Nihonggo Gakkou untuk
+                                    kandidat yang siap bekerja di sektor
+                                    pertanian Jepang.
+                                </p>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
+                                <div
+                                    class="rounded-lg border border-gray-100 bg-gray-50 p-4"
+                                >
+                                    <p
+                                        class="text-sm font-semibold text-gray-500"
+                                    >
+                                        Kuota
+                                    </p>
+                                    <p class="mt-1 font-bold">100 orang</p>
+                                </div>
+                                <div
+                                    class="rounded-lg border border-gray-100 bg-gray-50 p-4"
+                                >
+                                    <p
+                                        class="text-sm font-semibold text-gray-500"
+                                    >
+                                        Level
+                                    </p>
+                                    <p class="mt-1 font-bold">N4</p>
+                                </div>
+                                <div
+                                    class="rounded-lg border border-gray-100 bg-gray-50 p-4"
+                                >
+                                    <p
+                                        class="text-sm font-semibold text-gray-500"
+                                    >
+                                        Visa
+                                    </p>
+                                    <p class="mt-1 font-bold">
+                                        Tokutei Ginou
+                                    </p>
+                                </div>
+                                <div
+                                    class="rounded-lg border border-gray-100 bg-gray-50 p-4"
+                                >
+                                    <p
+                                        class="text-sm font-semibold text-gray-500"
+                                    >
+                                        Lembaga
+                                    </p>
+                                    <p class="mt-1 font-bold">
+                                        Kayuki Nihonggo Gakkou
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div
+                                    class="rounded-lg border border-gray-100 bg-white p-6 shadow-sm"
+                                >
+                                    <h3 class="text-xl font-bold">
+                                        Kualifikasi
+                                    </h3>
+                                    <ul class="mt-4 space-y-3 text-gray-600">
+                                        <li class="flex gap-3">
+                                            <i
+                                                class="fas fa-check-circle mt-1 text-amber-600"
+                                            ></i>
+                                            <span>Laki-laki</span>
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <i
+                                                class="fas fa-check-circle mt-1 text-amber-600"
+                                            ></i>
+                                            <span>Memiliki persyaratan N4</span>
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <i
+                                                class="fas fa-check-circle mt-1 text-amber-600"
+                                            ></i>
+                                            <span
+                                                >Memiliki SSW Pertanian /
+                                                Senmonkyu</span
+                                            >
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <i
+                                                class="fas fa-check-circle mt-1 text-amber-600"
+                                            ></i>
+                                            <span
+                                                >Siswa Kayuki Nihonggo
+                                                Gakkou</span
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="rounded-lg border border-gray-100 bg-white p-6 shadow-sm"
+                                >
+                                    <h3 class="text-xl font-bold">
+                                        Gaji & Penempatan
+                                    </h3>
+                                    <div class="mt-4 space-y-4 text-gray-600">
+                                        <p>
+                                            Gaji perbulan dari
+                                            <strong
+                                                >&yen;200.000 s/d
+                                                &yen;300.000</strong
+                                            >.
+                                        </p>
+                                        <p>
+                                            Penempatan di berbagai lokasi
+                                            seluruh daerah Jepang dengan sistem
+                                            nomaden / berpindah lokasi.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="rounded-lg border border-amber-100 bg-amber-50 p-6"
+                            >
+                                <h3 class="text-xl font-bold text-amber-900">
+                                    Detail Pekerjaan
+                                </h3>
+                                <p class="mt-3 text-amber-900">
+                                    Pertanian umum seperti menanam, memanen,
+                                    memilah, mengepack, mengirim, mencabut
+                                    rumput sayuran, serta dapat mengurus sapi
+                                    dan pekerjaan lain sesuai kebutuhan
+                                    lapangan.
+                                </p>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div
+                                    class="rounded-lg border border-blue-100 bg-blue-50 p-6"
+                                >
+                                    <p
+                                        class="text-sm font-semibold uppercase tracking-widest text-blue-600"
+                                    >
+                                        Price 1
+                                    </p>
+                                    <p class="mt-2 text-3xl font-bold">
+                                        8,5 Juta
+                                    </p>
+                                    <p class="mt-2 text-gray-600">
+                                        Potongan sedang masa promo
+                                    </p>
+                                </div>
+                                <div
+                                    class="rounded-lg border border-blue-100 bg-blue-50 p-6"
+                                >
+                                    <p
+                                        class="text-sm font-semibold uppercase tracking-widest text-blue-600"
+                                    >
+                                        Price 2
+                                    </p>
+                                    <p class="mt-2 text-3xl font-bold">
+                                        7 Juta
+                                    </p>
+                                    <p class="mt-2 text-gray-600">
+                                        Plus dapat asrama
+                                    </p>
+                                </div>
+                            </div>
+
+                            <a
+                                href="https://forms.gle/Cnbf2oqy5tvMk3yP9"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="button-hover-effect inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-bold text-white hover:bg-blue-700"
+                            >
+                                Daftar Program Pertanian
+                                <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+
+                        <div>
+                            <img
+                                src="img/pertanian.jpeg"
+                                alt="Informasi Job Pertanian Jepang"
+                                class="w-full rounded-lg bg-white shadow-japanese"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact CTA -->
+            <section class="py-16 bg-blue-600 text-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-8 lg:gap-10 items-center"
+                    >
+                        <div>
+                            <p
+                                class="text-sm font-bold uppercase tracking-widest text-blue-100"
+                            >
+                                Kontak Job Matching
+                            </p>
+                            <h2
+                                class="mt-3 text-3xl sm:text-4xl font-bold leading-tight"
+                            >
+                                Siapkan dokumen dan daftar melalui formulir
+                                resmi Kayuki
+                            </h2>
+                            <p class="mt-4 text-blue-100">
+                                Gunakan tombol daftar untuk mengirim data.
+                                Untuk konsultasi awal, hubungi tim Kayuki
+                                melalui WhatsApp.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <a
+                                href="https://forms.gle/Cnbf2oqy5tvMk3yP9"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="button-hover-effect rounded-lg bg-white p-5 font-bold text-blue-600 hover:bg-blue-50"
+                            >
+                                <span class="block">Form Pendaftaran</span>
+                                <span
+                                    class="mt-2 inline-flex items-center gap-2 text-sm"
+                                    >Buka Google Form
+                                    <i class="fas fa-arrow-right"></i
+                                ></span>
+                            </a>
+                            <a
+                                href="https://wa.me/6285783900814"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="button-hover-effect rounded-lg bg-green-500 p-5 font-bold text-white hover:bg-green-600"
+                            >
+                                <span class="block">WhatsApp Minki</span>
+                                <span
+                                    class="mt-2 inline-flex items-center gap-2 text-sm"
+                                    >0857-8390-0814
+                                    <i class="fab fa-whatsapp"></i
+                                ></span>
+                            </a>
+                            <a
+                                href="https://wa.me/6285294226980"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="button-hover-effect rounded-lg bg-green-500 p-5 font-bold text-white hover:bg-green-600"
+                            >
+                                <span class="block">Farhan Sensei</span>
+                                <span
+                                    class="mt-2 inline-flex items-center gap-2 text-sm"
+                                    >0852-9422-6980
+                                    <i class="fab fa-whatsapp"></i
+                                ></span>
+                            </a>
+                            <a
+                                href="https://wa.me/6282130825062"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="button-hover-effect rounded-lg bg-green-500 p-5 font-bold text-white hover:bg-green-600"
+                            >
+                                <span class="block">Andrian Sensei</span>
+                                <span
+                                    class="mt-2 inline-flex items-center gap-2 text-sm"
+                                    >0821-3082-5062
+                                    <i class="fab fa-whatsapp"></i
+                                ></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <div class="flex items-center mb-5">
+                            <img
+                                src="img/logo-kayuki.png"
+                                alt="Logo Kayuki Nihongo Gakkou"
+                                class="h-12 w-12 object-contain rounded-full bg-white p-1 mr-3"
+                            />
+                            <h3 class="text-xl font-bold">Kayuki</h3>
+                        </div>
+                        <p class="text-gray-300 leading-relaxed">
+                            Lembaga pendidikan bahasa Jepang dan persiapan
+                            karir Jepang di Cianjur.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold mb-4 text-blue-400">
+                            Tautan Cepat
+                        </h4>
+                        <ul class="space-y-3 text-gray-300">
+                            <li>
+                                <a
+                                    href="index.html"
+                                    class="hover:text-blue-400 transition"
+                                    >Beranda</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="program.html"
+                                    class="hover:text-blue-400 transition"
+                                    >Program</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="pendaftaran.html"
+                                    class="hover:text-blue-400 transition"
+                                    >Daftar Kelas</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="daftar-job-matching.html"
+                                    class="hover:text-blue-400 transition"
+                                    >Daftar Job Matching</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="kontak.html"
+                                    class="hover:text-blue-400 transition"
+                                    >Kontak</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold mb-4 text-blue-400">
+                            Sosial Media
+                        </h4>
+                        <p class="text-gray-300">@kayuki.jpcourse</p>
+                        <div class="flex space-x-3 mt-5">
+                            <a
+                                href="https://www.instagram.com/kayuki.jpcourse/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="h-10 w-10 rounded-lg bg-gray-800 hover:bg-blue-600 flex items-center justify-center transition"
+                                aria-label="Instagram Kayuki"
+                            >
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a
+                                href="https://www.tiktok.com/@kayuki.jpcourse"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="h-10 w-10 rounded-lg bg-gray-800 hover:bg-blue-600 flex items-center justify-center transition"
+                                aria-label="TikTok Kayuki"
+                            >
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a
+                                href="https://wa.me/6285783900814"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="h-10 w-10 rounded-lg bg-gray-800 hover:bg-green-600 flex items-center justify-center transition"
+                                aria-label="WhatsApp Kayuki"
+                            >
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="border-t border-gray-800 mt-10 pt-6 text-sm text-gray-400"
+                >
+                    <p>
+                        &copy; 2026 Kayuki Nihongo Gakkou. Semua hak
+                        dilindungi.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Floating WhatsApp Button -->
+        <a
+            href="https://wa.me/6285783900814"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="floating-whatsapp fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-40 w-14 h-14 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-japanese flex items-center justify-center transition duration-300"
+            aria-label="Hubungi Kayuki melalui WhatsApp"
+        >
+            <i class="fab fa-whatsapp text-2xl sm:text-3xl"></i>
+        </a>
+
+        <script>
+            const mobileMenuButton =
+                document.getElementById("mobileMenuButton");
+            const mobileMenu = document.getElementById("mobileMenu");
+            const mobileMenuIcon = document.getElementById("mobileMenuIcon");
+
+            function closeMobileMenu() {
+                if (!mobileMenu || !mobileMenuButton || !mobileMenuIcon) return;
+                mobileMenu.classList.add("hidden");
+                mobileMenuButton.setAttribute("aria-expanded", "false");
+                mobileMenuButton.setAttribute(
+                    "aria-label",
+                    "Buka menu navigasi",
+                );
+                mobileMenuIcon.classList.add("fa-bars");
+                mobileMenuIcon.classList.remove("fa-times");
+            }
+
+            if (mobileMenuButton && mobileMenu && mobileMenuIcon) {
+                mobileMenuButton.addEventListener("click", () => {
+                    const isOpen = !mobileMenu.classList.contains("hidden");
+                    mobileMenu.classList.toggle("hidden");
+                    mobileMenuButton.setAttribute(
+                        "aria-expanded",
+                        String(!isOpen),
+                    );
+                    mobileMenuButton.setAttribute(
+                        "aria-label",
+                        isOpen ? "Buka menu navigasi" : "Tutup menu navigasi",
+                    );
+                    mobileMenuIcon.classList.toggle("fa-bars", isOpen);
+                    mobileMenuIcon.classList.toggle("fa-times", !isOpen);
+                });
+
+                mobileMenu.querySelectorAll("a").forEach((link) => {
+                    link.addEventListener("click", closeMobileMenu);
+                });
+
+                window.addEventListener("resize", () => {
+                    if (window.innerWidth >= 1280) closeMobileMenu();
+                });
+            }
+        </script>
+    </body>
+</html>
